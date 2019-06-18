@@ -1,0 +1,103 @@
+GOID	GO term	Frequency	Genome Frequency	Gene(s)
+6364	 rRNA processing	"57 out of 230 genes, 24.8%"	"311 of 6341 genes, 4.9%"	"MAK16,FUN12,MAK5,RPS9B,SPB1,NOP1,DBP10,NOP14,SAS10,NHP2,TMA64,ESF1,RRP17,RPL37B,SNU13,NSA2,LOC1,CGR1,DBP3,NOP7,NSR1,ZUO1,RPS20,SSZ1,SSF1,NOP10,FAF1,BMT5,MAK11,UTP11,EBP2,DBP7,RPS21A,NOC3,FCF2,FYV7,CBF5,PWP1,NOP56,DBP9,UTP14,BUD22,ERB1,RPS16A,RNT1,RIO2,JJJ1,KRI1,MPP6,ESF2,RIO1,RRP36,NOP58,NOP4,NOP53,RRP9,RRP15"
+42273	 ribosomal large subunit biogenesis	"29 out of 230 genes, 12.6%"	"104 of 6341 genes, 1.6%"	"MAK16,MAK5,SPB1,DBP10,SSF2,RPL37B,NOP16,NSA2,LOC1,DBP3,NOP7,SSF1,MAK11,RRP14,DBP7,RPL40B,DBP9,RPL6B,RPL6A,ERB1,NOP15,JJJ1,BRX1,NOC2,YTM1,NOP4,NOP53,RRP15,JIP5"
+42274	 ribosomal small subunit biogenesis	"27 out of 230 genes, 11.7%"	"135 of 6341 genes, 2.1%"	"FUN12,RPS9B,NOP14,SAS10,NOP6,SNU13,LOC1,NOP7,NSR1,RPS20,FAF1,RRP14,UTP11,RPS21A,FCF2,FYV7,UTP14,BUD22,RPS16A,RIO2,RPS19B,KRI1,ESF2,RPS19A,RIO1,RRP36,NOP58"
+2181	 cytoplasmic translation	"24 out of 230 genes, 10.4%"	"179 of 6341 genes, 2.8%"	"FUN12,RPS29B,RPL31A,RPL37B,RPS25A,RPS20,SSZ1,RPL34B,RPL39,RPS5,RPS21A,RPL40B,RPL22A,RPL38,RPS22B,RPL6B,RPL6A,RPS16A,TIF11,RPS19B,RPS19A,TMA46,RPL20B,RPS12"
+6325	 chromatin organization	"21 out of 230 genes, 9.1%"	"318 of 6341 genes, 5.0%"	"SWC3,HTB2,NOP1,BDF2,NSI1,CPR1,HTA1,SPT2,RTG2,SET5,NET1,ELF1,TOF2,BDF1,FPR4,FPR3,RNT1,TOP1,HTZ1,HHO1,RLF2"
+6360	 transcription from RNA polymerase I promoter	"20 out of 230 genes, 8.7%"	"66 of 6341 genes, 1.0%"	"RPB5,NSI1,RPA14,HMO1,DST1,RPC10,RPA34,RPA12,RPC19,RPA49,CKB2,CKA2,RIO1,RPB10,RPB8,RPA43,RPA190,RPA135,RPC40,RPO26"
+6366	 transcription from RNA polymerase II promoter	"17 out of 230 genes, 7.4%"	"474 of 6341 genes, 7.5%"	"RPB5,HMO1,HTA1,SPT2,DST1,RTG2,RPC10,TFA1,ELF1,SUB1,RNT1,TOP1,HTZ1,RPB10,RPB8,FHL1,RPO26"
+33043	 regulation of organelle organization	"16 out of 230 genes, 7%"	"287 of 6341 genes, 4.5%"	"EFB1,RIM1,BDF2,NSI1,CPR1,YCG1,RTG2,PXR1,NET1,BDF1,FPR4,FPR3,MDM20,RIO1,BFR1,HHO1"
+8150	 biological process unknown	"16 out of 230 genes, 7%"	"1047 of 6341 genes, 16.5%"	"YBL028C,GFD2,YCR087C-A,PAR32,MRH1,PSP1,YDR514C,YGR130C,YGR237C,CRP1,RRT14,TMA22,YKL023W,YLR363W-A,YNL050C,KEL3"
+7005	 mitochondrion organization	"15 out of 230 genes, 6.5%"	"421 of 6341 genes, 6.6%"	"RIM1,MRX14,MRPS28,MRP1,MRPL25,RRF1,DJP1,MDV1,MRPL31,MRPL39,MRPL24,MRP7,YNL122C,MDM20,RTC6"
+51169	 nuclear transport	"13 out of 230 genes, 5.7%"	"176 of 6341 genes, 2.8%"	"BCP1,YRA1,RTG2,ZUO1,MLP2,RPS5,SRP40,RPL40B,RIO2,JJJ1,RPS19B,RPS19A,NOP53"
+6417	 regulation of translation	"13 out of 230 genes, 5.7%"	"105 of 6341 genes, 1.7%"	"EFB1,FUN12,RPS9B,RPL31A,PAB1,ECM32,GCN20,ZUO1,SSZ1,TRL1,RPS5,STM1,ASC1"
+9451	 RNA modification	"12 out of 230 genes, 5.2%"	"172 of 6341 genes, 2.7%"	"SPB1,NOP1,NHP2,TRM1,THG1,NOP10,GAR1,BMT5,CBF5,NOP56,PUS1,RRP9"
+70925	 organelle assembly	"11 out of 230 genes, 4.8%"	"131 of 6341 genes, 2.1%"	"FUN12,SSF2,LSM4,NSR1,SSF1,MAK11,RPL40B,RPL6B,RPL6A,ESF2,BRX1"
+6383	 transcription from RNA polymerase III promoter	"11 out of 230 genes, 4.8%"	"41 of 6341 genes, 0.6%"	"RPB5,DST1,RPC10,SUB1,RPC19,CKB2,CKA2,RPB10,RPB8,RPC40,RPO26"
+32543	 mitochondrial translation	"11 out of 230 genes, 4.8%"	"167 of 6341 genes, 2.6%"	"MRX14,MRPS28,MRP1,MRPL25,RRF1,MRPL31,MRPL39,MRPL24,MRP7,YNL122C,RTC6"
+42255	 ribosome assembly	"10 out of 230 genes, 4.3%"	"59 of 6341 genes, 0.9%"	"FUN12,SSF2,NSR1,SSF1,MAK11,RPL40B,RPL6B,RPL6A,ESF2,BRX1"
+48285	 organelle fission	"10 out of 230 genes, 4.3%"	"294 of 6341 genes, 4.6%"	"CPR1,YCG1,SCC4,NET1,MDV1,EBP2,FPR3,TOP1,RIO1,BFR1"
+6414	 translational elongation	"9 out of 230 genes, 3.9%"	"334 of 6341 genes, 5.3%"	"EFB1,RPS9B,RPL31A,GCN20,ZUO1,SSZ1,RPS5,STM1,ASC1"
+6974	 cellular response to DNA damage stimulus	"8 out of 230 genes, 3.5%"	"299 of 6341 genes, 4.7%"	"HTA1,YRA1,SCC4,PRI2,BDF1,SUB1,CKB2,CKA2"
+5975	 carbohydrate metabolic process	"8 out of 230 genes, 3.5%"	"256 of 6341 genes, 4.0%"	"PGI1,PYC2,TPI1,SAK1,OCH1,PYC1,HXK2,KAR2"
+42221	 response to chemical	"8 out of 230 genes, 3.5%"	"442 of 6341 genes, 7%"	"SVF1,RTG2,KAR2,TRL1,DRE2,SUB1,ASC1,ZWF1"
+51186	 cofactor metabolic process	"8 out of 230 genes, 3.5%"	"178 of 6341 genes, 2.8%"	"PGI1,TPI1,HXK2,YKL151C,DRE2,YMR315W,ZWF1,ALD4"
+55086	 nucleobase-containing small molecule metabolic process	"8 out of 230 genes, 3.5%"	"198 of 6341 genes, 3.1%"	"PGI1,TPI1,HXK2,YKL151C,IMD3,YMR315W,ZWF1,ALD4"
+6397	 mRNA processing	"7 out of 230 genes, 3.0%"	"170 of 6341 genes, 2.7%"	"SNU23,SNU13,SMB1,LSM4,DST1,TRL1,CEF1"
+51726	 regulation of cell cycle	"7 out of 230 genes, 3.0%"	"210 of 6341 genes, 3.3%"	"CPR1,YCG1,NET1,FPR3,SUB1,RIO1,BFR1"
+6605	 protein targeting	"7 out of 230 genes, 3.0%"	"303 of 6341 genes, 4.8%"	"APM3,SRP14,RTG2,DJP1,KAR2,SRP21,SEC62"
+6520	 cellular amino acid metabolic process	"7 out of 230 genes, 3.0%"	"153 of 6341 genes, 2.4%"	"KRS1,MET6,ARC1,GUS1,VAS1,DED81,DPS1"
+6354	" DNA-templated transcription, elongation"	"7 out of 230 genes, 3.0%"	"96 of 6341 genes, 1.5%"	"SPT2,DST1,RPA34,ELF1,SUB1,RPA49,TOP1"
+8380	 RNA splicing	"6 out of 230 genes, 2.6%"	"144 of 6341 genes, 2.3%"	"SNU23,SNU13,SMB1,LSM4,TRL1,CEF1"
+6281	 DNA repair	"6 out of 230 genes, 2.6%"	"246 of 6341 genes, 3.9%"	"HTA1,YRA1,SCC4,PRI2,BDF1,SUB1"
+6401	 RNA catabolic process	"6 out of 230 genes, 2.6%"	"132 of 6341 genes, 2.1%"	"LSM4,PAB1,UPF3,RNT1,MPP6,HTZ1"
+6260	 DNA replication	"6 out of 230 genes, 2.6%"	"139 of 6341 genes, 2.2%"	"RIM1,SAK1,NOP7,PRI2,NOC3,TOP1"
+15931	 nucleobase-containing compound transport	"6 out of 230 genes, 2.6%"	"138 of 6341 genes, 2.2%"	"YRA1,MLP2,RPS5,RIO2,RPS19B,RPS19A"
+32787	 monocarboxylic acid metabolic process	"6 out of 230 genes, 2.6%"	"127 of 6341 genes, 2.0%"	"PGI1,DLD1,TPI1,HXK2,HFA1,ALD4"
+278	 mitotic cell cycle	"6 out of 230 genes, 2.6%"	"319 of 6341 genes, 5.0%"	"YCG1,SCC4,NET1,TOP1,RIO1,BFR1"
+48193	 Golgi vesicle transport	"6 out of 230 genes, 2.6%"	"186 of 6341 genes, 2.9%"	"APM3,COP1,RET2,SEC27,SEC28,RSN1"
+23052	 signaling	"6 out of 230 genes, 2.6%"	"240 of 6341 genes, 3.8%"	"ACK1,RTG2,SYG1,TRL1,STM1,ASC1"
+6418	 tRNA aminoacylation for protein translation	"6 out of 230 genes, 2.6%"	"36 of 6341 genes, 0.6%"	"KRS1,ARC1,GUS1,VAS1,DED81,DPS1"
+6353	" DNA-templated transcription, termination"	"5 out of 230 genes, 2.2%"	"43 of 6341 genes, 0.7%"	"NSI1,DST1,RPA12,SUB1,RNT1"
+55085	 transmembrane transport	"5 out of 230 genes, 2.2%"	"230 of 6341 genes, 3.6%"	"SRP14,DJP1,KAR2,SRP21,SEC62"
+18193	 peptidyl-amino acid modification	"5 out of 230 genes, 2.2%"	"150 of 6341 genes, 2.4%"	"SET5,FPR4,MDM20,CKB2,CKA2"
+51321	 meiotic cell cycle	"5 out of 230 genes, 2.2%"	"280 of 6341 genes, 4.4%"	"CPR1,YCG1,FPR3,SUB1,BFR1"
+54	 ribosomal subunit export from nucleus	"5 out of 230 genes, 2.2%"	"46 of 6341 genes, 0.7%"	"BCP1,ZUO1,RPL40B,JJJ1,NOP53"
+7010	 cytoskeleton organization	"4 out of 230 genes, 1.7%"	"230 of 6341 genes, 3.6%"	"EFB1,MLP2,NOP15,MDM20"
+6413	 translational initiation	"4 out of 230 genes, 1.7%"	"61 of 6341 genes, 1%"	"FUN12,PAB1,STM1,TIF11"
+6352	" DNA-templated transcription, initiation"	"4 out of 230 genes, 1.7%"	"71 of 6341 genes, 1.1%"	"HMO1,DST1,TFA1,SUB1"
+16570	 histone modification	"4 out of 230 genes, 1.7%"	"114 of 6341 genes, 1.8%"	"NOP1,CPR1,SET5,FPR4"
+6997	 nucleus organization	"4 out of 230 genes, 1.7%"	"66 of 6341 genes, 1.0%"	"KAR2,NET1,TOF2,SYH1"
+6468	 protein phosphorylation	"4 out of 230 genes, 1.7%"	"199 of 6341 genes, 3.1%"	"SAK1,CKB2,CKA2,RIO1"
+70271	 protein complex biogenesis	"4 out of 230 genes, 1.7%"	"304 of 6341 genes, 4.8%"	"DST1,FPR4,FPR3,RLF2"
+43144	 snoRNA processing	"4 out of 230 genes, 1.7%"	"45 of 6341 genes, 0.7%"	"NOP1,PXR1,CBF5,RNT1"
+51052	 regulation of DNA metabolic process	"4 out of 230 genes, 1.7%"	"103 of 6341 genes, 1.6%"	"RIM1,PXR1,TOP1,HHO1"
+8033	 tRNA processing	"4 out of 230 genes, 1.7%"	"106 of 6341 genes, 1.7%"	"TRM1,THG1,TRL1,PUS1"
+746	 conjugation	"3 out of 230 genes, 1.3%"	"124 of 6341 genes, 2%"	"SSF2,SSF1,KAR2"
+6629	 lipid metabolic process	"3 out of 230 genes, 1.3%"	"280 of 6341 genes, 4.4%"	"HFA1,ERG10,GDE1"
+6310	 DNA recombination	"3 out of 230 genes, 1.3%"	"175 of 6341 genes, 2.8%"	"UPF3,TOP1,HHO1"
+6979	 response to oxidative stress	"3 out of 230 genes, 1.3%"	"103 of 6341 genes, 1.6%"	"SVF1,DRE2,ZWF1"
+6970	 response to osmotic stress	"3 out of 230 genes, 1.3%"	"92 of 6341 genes, 1.5%"	"SUB1,NST1,CKA2"
+71554	 cell wall organization or biogenesis	"3 out of 230 genes, 1.3%"	"198 of 6341 genes, 3.1%"	"ACK1,KAR2,RNT1"
+8213	 protein alkylation	"3 out of 230 genes, 1.3%"	"50 of 6341 genes, 0.8%"	"NOP1,SET5,FPR4"
+6091	 generation of precursor metabolites and energy	"3 out of 230 genes, 1.3%"	"153 of 6341 genes, 2.4%"	"PGI1,TPI1,HXK2"
+7059	 chromosome segregation	"3 out of 230 genes, 1.3%"	"197 of 6341 genes, 3.1%"	"YCG1,SCC4,TOP1"
+16197	 endosomal transport	"2 out of 230 genes, 0.9%"	"102 of 6341 genes, 1.6%"	"SEC27,SEC28"
+48308	 organelle inheritance	"2 out of 230 genes, 0.9%"	"60 of 6341 genes, 0.9%"	"RET2,MDM20"
+43934	 sporulation	"2 out of 230 genes, 0.9%"	"133 of 6341 genes, 2.1%"	"CPR1,SUB1"
+43543	 protein acylation	"2 out of 230 genes, 0.9%"	"66 of 6341 genes, 1.0%"	"NAT1,MDM20"
+6897	 endocytosis	"2 out of 230 genes, 0.9%"	"97 of 6341 genes, 1.5%"	"YAP1801,JJJ1"
+7031	 peroxisome organization	"2 out of 230 genes, 0.9%"	"73 of 6341 genes, 1.2%"	"DJP1,MDV1"
+70647	 protein modification by small protein conjugation or removal	"2 out of 230 genes, 0.9%"	"170 of 6341 genes, 2.7%"	"UPF3,RPL40B"
+32200	 telomere organization	"2 out of 230 genes, 0.9%"	"78 of 6341 genes, 1.2%"	"PXR1,STM1"
+31399	 regulation of protein modification process	"1 out of 230 genes, 0.4%"	"111 of 6341 genes, 1.8%"	FPR4
+6486	 protein glycosylation	"1 out of 230 genes, 0.4%"	"62 of 6341 genes, 1%"	OCH1
+32196	 transposition	"1 out of 230 genes, 0.4%"	"110 of 6341 genes, 1.7%"	RPC40
+910	 cytokinesis	"1 out of 230 genes, 0.4%"	"81 of 6341 genes, 1.3%"	NOP15
+6457	 protein folding	"1 out of 230 genes, 0.4%"	"95 of 6341 genes, 1.5%"	ZUO1
+16050	 vesicle organization	"1 out of 230 genes, 0.4%"	"72 of 6341 genes, 1.1%"	SEC28
+51603	 proteolysis involved in cellular protein catabolic process	"1 out of 230 genes, 0.4%"	"215 of 6341 genes, 3.4%"	KAR2
+8643	 carbohydrate transport	"1 out of 230 genes, 0.4%"	"33 of 6341 genes, 0.5%"	HXK2
+7124	 pseudohyphal growth	"1 out of 230 genes, 0.4%"	"74 of 6341 genes, 1.2%"	SAK1
+51049	 regulation of transport	"1 out of 230 genes, 0.4%"	"84 of 6341 genes, 1.3%"	RIO2
+51604	 protein maturation	"1 out of 230 genes, 0.4%"	"49 of 6341 genes, 0.8%"	MAP1
+1403	 invasive growth in response to glucose limitation	"1 out of 230 genes, 0.4%"	"59 of 6341 genes, 0.9%"	ASC1
+48284	 organelle fusion	"1 out of 230 genes, 0.4%"	"88 of 6341 genes, 1.4%"	KAR2
+6470	 protein dephosphorylation	"0 out of 230 genes, 0%"	"48 of 6341 genes, 0.8%"	none
+45333	 cellular respiration	"0 out of 230 genes, 0%"	"83 of 6341 genes, 1.3%"	none
+7033	 vacuole organization	"0 out of 230 genes, 0%"	"92 of 6341 genes, 1.5%"	none
+902	 cell morphogenesis	"0 out of 230 genes, 0%"	"29 of 6341 genes, 0.5%"	none
+10324	 membrane invagination	"0 out of 230 genes, 0%"	"0 of 6341 genes, 0%"	none
+6766	 vitamin metabolic process	"0 out of 230 genes, 0%"	"43 of 6341 genes, 0.7%"	none
+7114	 cell budding	"0 out of 230 genes, 0%"	"58 of 6341 genes, 0.9%"	none
+9408	 response to heat	"0 out of 230 genes, 0%"	"71 of 6341 genes, 1.1%"	none
+6497	 protein lipidation	"0 out of 230 genes, 0%"	"45 of 6341 genes, 0.7%"	none
+6887	 exocytosis	"0 out of 230 genes, 0%"	"49 of 6341 genes, 0.8%"	none
+6873	 cellular ion homeostasis	"0 out of 230 genes, 0%"	"125 of 6341 genes, 2%"	none
+6869	 lipid transport	"0 out of 230 genes, 0%"	"67 of 6341 genes, 1.1%"	none
+9311	 oligosaccharide metabolic process	"0 out of 230 genes, 0%"	"31 of 6341 genes, 0.5%"	none
+6865	 amino acid transport	"0 out of 230 genes, 0%"	"33 of 6341 genes, 0.5%"	none
+42594	 response to starvation	"0 out of 230 genes, 0%"	"56 of 6341 genes, 0.9%"	none
+61025	 membrane fusion	"0 out of 230 genes, 0%"	"75 of 6341 genes, 1.2%"	none
+6811	 ion transport	"0 out of 230 genes, 0%"	"182 of 6341 genes, 2.9%"	none
+other	other	"8 out of 230 genes, 3.5%"		"DUR1,2,PPN1,TMA20,GTO1,PCT1,IMH1,EIS1,NAF1"

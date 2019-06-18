@@ -1,0 +1,1339 @@
+#library(XML)
+#x <- readHTMLTable("http://pfam.xfam.org/search/keyword?query=dna+binding&submit=Submit")
+#x <- x[[2]]  # second table in the webpage is the list of pfam domains
+#x$Pfam     <- ifelse(x$Pfam     == "10000000", FALSE, TRUE) # "10000000" is 'no tick' in the column
+#x$Seq_info <- ifelse(x$Seq_info == "10000000", FALSE, TRUE)
+#x$Pdb      <- ifelse(x$Pdb      == "10000000", FALSE, TRUE)
+#x$GO       <- ifelse(x$GO       == "10000000", FALSE, TRUE)
+#x$Interpro <- ifelse(x$Interpro == "10000000", FALSE, TRUE)
+## remove all domains only annotated by "Seq_info" or "Pdb". 1000000 means no tick
+#seq_info <- (!x$Pfam &  x$Seq_info & !x$Pdb & !x$GO & !x$Interpro)  # seq_info only
+#pdb      <- (!x$Pfam & !x$Seq_info &  x$Pdb & !x$GO & !x$Interpro)  # pdb only
+#x <- x[!seq_info & !pdb , ]
+#write.table(x[, -1], file="/fsimb/groups/imb-buttergr/=EVOREG/rnalib/analysis/db/PfamA_sergi_DBD.csv", row.names=F, sep="\t")
+"Accession"	"ID"	"Description"	"Pfam"	"Seq_info"	"Pdb"	"GO"	"Interpro"
+"PF00010"	"HLH"	"Helix-loop-helix DNA-binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF00165"	"HTH_AraC"	"Bacterial regulatory helix-turn-helix proteins, AraC family"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF00216"	"Bac_DNA_binding"	"Bacterial DNA-binding protein"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF00313"	"CSD"	"'Cold-shock' DNA-binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF00319"	"SRF-TF"	"SRF-type transcription factor (DNA-binding and dimerisation domain)"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF00436"	"SSB"	"Single-strand binding protein family"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF00447"	"HSF_DNA-bind"	"HSF-type DNA-binding"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF00488"	"MutS_V"	"MutS domain V"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF00633"	"HHH"	"Helix-hairpin-helix motif"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF00747"	"Viral_DNA_bp"	"ssDNA binding protein"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF00751"	"DM"	"DM DNA binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01022"	"HTH_5"	"Bacterial regulatory protein, arsR family"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01035"	"DNA_binding_1"	"6-O-methylguanine DNA methyltransferase, DNA binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01047"	"MarR"	"MarR family"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01325"	"Fe_dep_repress"	"Iron dependent repressor, N-terminal DNA binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01381"	"HTH_3"	"Helix-turn-helix"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01388"	"ARID"	"ARID/BRIGHT DNA binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01429"	"MBD"	"Methyl-CpG binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01624"	"MutS_I"	"MutS domain I"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01726"	"LexA_DNA_bind"	"LexA DNA binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01807"	"zf-CHC2"	"CHC2 zinc finger"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02008"	"zf-CXXC"	"CXXC zinc finger domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02229"	"PC4"	"Transcriptional Coactivator p15 (PC4)"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02236"	"Viral_DNA_bi"	"Viral DNA-binding protein, all alpha domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02257"	"RFX_DNA_binding"	"RFX DNA-binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02294"	"7kD_DNA_binding"	"7kD DNA-binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02303"	"Phage_DNA_bind"	"Helix-destabilising protein"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02316"	"HTH_Tnp_Mu_1"	"Mu DNA-binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02362"	"B3"	"B3 DNA binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02376"	"CUT"	"CUT domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02735"	"Ku"	"Ku70/Ku80 beta-barrel domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02805"	"Ada_Zn_binding"	"Metal binding domain of Ada"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF02919"	"Topoisom_I_N"	"Eukaryotic DNA topoisomerase I, DNA binding fragment"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF03106"	"WRKY"	"WRKY DNA -binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF03441"	"FAD_binding_7"	"FAD binding domain of DNA photolyase"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF03728"	"Viral_DNA_Zn_bi"	"Viral DNA-binding protein, zinc binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF04218"	"CENP-B_N"	"CENP-B N-terminal DNA-binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF04397"	"LytTR"	"LytTr DNA-binding domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF05188"	"MutS_II"	"MutS domain II"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF05190"	"MutS_IV"	"MutS family domain IV"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF05192"	"MutS_III"	"MutS domain III"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF05224"	"NDT80_PhoG"	"NDT80 / PhoG like DNA-binding  family"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF05225"	"HTH_psq"	"helix-turn-helix, Psq domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF05472"	"Ter"	"DNA replication terminus site-binding protein (Ter protein)"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF06831"	"H2TH"	"Formamidopyrimidine-DNA glycosylase H2TH domain"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF08558"	"TRF"	"Telomere repeat binding factor (TRF)"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF08804"	"gp32"	"gp32 DNA binding protein like"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF09182"	"PuR_N"	"Bacterial purine repressor, N-terminal"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF09197"	"Rap1-DNA-bind"	"Rap1, DNA-binding"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF14850"	"Pro_dh-DNA_bdg"	"DNA-binding domain of Proline dehydrogenase"	TRUE	TRUE	TRUE	TRUE	TRUE
+"PF01396"	"zf-C4_Topoisom"	"Topoisomerase DNA binding C4 zinc finger"	TRUE	TRUE	TRUE	TRUE	FALSE
+"PF01984"	"dsDNA_bind"	"Double-stranded DNA-binding domain"	TRUE	TRUE	TRUE	TRUE	FALSE
+"PF02311"	"AraC_binding"	"AraC-like ligand binding domain"	TRUE	TRUE	TRUE	TRUE	FALSE
+"PF02765"	"POT1"	"Telomeric single stranded DNA binding POT1/CDC13"	TRUE	TRUE	TRUE	TRUE	FALSE
+"PF03869"	"Arc"	"Arc-like DNA binding domain"	TRUE	TRUE	TRUE	TRUE	FALSE
+"PF06971"	"Put_DNA-bind_N"	"Putative DNA-binding protein N-terminus"	TRUE	TRUE	TRUE	TRUE	FALSE
+"PF00072"	"Response_reg"	"Response regulator receiver domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF00076"	"RRM_1"	"RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF00096"	"zf-C2H2"	"Zinc finger, C2H2 type"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF00249"	"Myb_DNA-binding"	"Myb-like DNA-binding domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF00532"	"Peripla_BP_1"	"Periplasmic binding proteins and sugar binding domain of LacI family"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF00533"	"BRCT"	"BRCA1 C Terminus (BRCT) domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF00644"	"PARP"	"Poly(ADP-ribose) polymerase catalytic domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF00665"	"rve"	"Integrase core domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF00730"	"HhH-GPD"	"HhH-GPD superfamily base excision DNA repair protein"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF01336"	"tRNA_anti-codon"	"OB-fold nucleic acid binding domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF01402"	"RHH_1"	"Ribbon-helix-helix protein, copG family"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF01638"	"HxlR"	"HxlR-like helix-turn-helix"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF01751"	"Toprim"	"Toprim domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF01833"	"TIG"	"IPT/TIG domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF02037"	"SAP"	"SAP domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF02457"	"DisA_N"	"DisA bacterial checkpoint controller nucleotide-binding"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF03178"	"CPSF_A"	"CPSF A subunit region"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF03221"	"HTH_Tnp_Tc5"	"Tc5 transposase DNA-binding domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF04383"	"KilA-N"	"KilA-N domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF04552"	"Sigma54_DBD"	"Sigma-54, DNA binding domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF05485"	"THAP"	"THAP domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF06445"	"GyrI-like"	"GyrI-like small molecule binding domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF06827"	"zf-FPG_IleRS"	"Zinc finger found in FPG and IleRS"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF07496"	"zf-CW"	"CW-type Zinc Finger"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF07729"	"FCD"	"FCD domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF07764"	"Omega_Repress"	"Omega Transcriptional Repressor"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF08523"	"MBF1"	"Multiprotein bridging factor 1"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF08535"	"KorB"	"KorB domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF08753"	"NikR_C"	"NikR C terminal nickel binding domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF08784"	"RPA_C"	"Replication protein A C terminal"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF08797"	"HIRAN"	"HIRAN domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF09011"	"HMG_box_2"	"HMG-box domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF09039"	"HTH_Tnp_Mu_2"	"Mu DNA binding, I gamma subdomain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF09079"	"Cdc6_C"	"CDC6, C terminal winged helix domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF09111"	"SLIDE"	"SLIDE"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF12747"	"DdrB"	"DdrB-like protein"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF13412"	"HTH_24"	"Winged helix-turn-helix DNA-binding"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF13936"	"HTH_38"	"Helix-turn-helix domain"	TRUE	TRUE	TRUE	FALSE	TRUE
+"PF01424"	"R3H"	"R3H domain"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF02295"	"z-alpha"	"Adenosine deaminase z-alpha domain"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF02463"	"SMC_N"	"RecF/RecN/SMC N terminal domain"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF02920"	"Integrase_DNA"	"DNA binding domain of tn916 integrase"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF03479"	"DUF296"	"Domain of unknown function (DUF296)"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF12802"	"MarR_2"	"MarR family"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF12826"	"HHH_2"	"Helix-hairpin-helix motif"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF12836"	"HHH_3"	"Helix-hairpin-helix motif"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF12844"	"HTH_19"	"Helix-turn-helix domain"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF13377"	"Peripla_BP_3"	"Periplasmic binding protein-like domain"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF13693"	"HTH_35"	"Winged helix-turn-helix DNA-binding"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF13837"	"Myb_DNA-bind_4"	"Myb/SANT-like DNA-binding domain"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF13921"	"Myb_DNA-bind_6"	"Myb-like DNA-binding domain"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF14848"	"HU-DNA_bdg"	"DNA-binding domain"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF15731"	"MqsA_antitoxin"	"Antitoxin component of bacterial toxin-antitoxin system, MqsA"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF16326"	"ABC_tran_CTD"	"ABC transporter C-terminal domain"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF16534"	"ULD"	"Ubiquitin-like oligomerisation domain of SATB"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF16557"	"CUTL"	"CUT1-like DNA-binding domain of SATB"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF16686"	"POT1PC"	"ssDNA-binding domain of telomere protection protein"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF16787"	"NDC10_II"	"Centromere DNA-binding protein complex CBF3 subunit, domain 2"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF16846"	"Cep3"	"Centromere DNA-binding protein complex CBF3 subunit B"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF16900"	"REPA_OB_2"	"Replication protein A OB domain"	TRUE	TRUE	TRUE	FALSE	FALSE
+"PF00649"	"Copper-fist"	"Copper fist DNA binding domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF00684"	"DnaJ_CXXCXGXG"	"DnaJ central domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF01580"	"FtsK_SpoIIIE"	"FtsK/SpoIIIE family"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF01586"	"Basic"	"Myogenic Basic domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF02178"	"AT_hook"	"AT hook motif"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF02319"	"E2F_TDP"	"E2F/DP family winged-helix DNA-binding domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF02399"	"Herpes_ori_bp"	"Origin of replication binding protein"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF02701"	"zf-Dof"	"Dof domain, zinc finger"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF03444"	"HrcA_DNA-bdg"	"Winged helix-turn-helix transcription repressor, HrcA DNA-binding"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF03796"	"DnaB_C"	"DnaB-like helicase C terminal domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF04152"	"Mre11_DNA_bind"	"Mre11 DNA-binding presumed domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF04326"	"AlbA_2"	"Putative DNA-binding domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF04589"	"RFX1_trans_act"	"RFX1 transcription activation region"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF04661"	"Pox_I3"	"Poxvirus I3 ssDNA-binding protein"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF04689"	"S1FA"	"DNA binding protein S1FA"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF04963"	"Sigma54_CBD"	"Sigma-54 factor, core binding domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF06733"	"DEAD_2"	"DEAD_2"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF07842"	"GCFC"	"GC-rich sequence DNA-binding factor-like protein"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF07934"	"OGG_N"	"8-oxoguanine DNA glycosylase, N-terminal domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF08755"	"YccV-like"	"Hemimethylated DNA-binding protein YccV like"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF13443"	"HTH_26"	"Cro/C1-type HTH DNA-binding domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF13463"	"HTH_27"	"Winged helix DNA-binding domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF13892"	"DBINO"	"DNA-binding domain"	TRUE	TRUE	FALSE	TRUE	TRUE
+"PF02371"	"Transposase_20"	"Transposase IS116/IS110/IS902 family"	TRUE	TRUE	FALSE	TRUE	FALSE
+"PF03126"	"Plus-3"	"Plus-3 domain"	TRUE	TRUE	FALSE	TRUE	FALSE
+"PF04406"	"TP6A_N"	"Type IIB DNA topoisomerase"	TRUE	TRUE	FALSE	TRUE	FALSE
+"PF04767"	"Pox_F17"	"DNA-binding 11 kDa phosphoprotein"	TRUE	TRUE	FALSE	TRUE	FALSE
+"PF05509"	"TraY"	"TraY domain"	TRUE	TRUE	FALSE	TRUE	FALSE
+"PF00874"	"PRD"	"PRD domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF01448"	"ELM2"	"ELM2 domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF02342"	"TerD"	"TerD domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF02381"	"MraZ"	"MraZ protein, putative antitoxin-like"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF02498"	"Bro-N"	"BRO family, N-terminal domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF02575"	"YbaB_DNA_bd"	"YbaB/EbfC DNA-binding family"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF02791"	"DDT"	"DDT domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF02928"	"zf-C5HC2"	"C5HC2 zinc finger"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF03101"	"FAR1"	"FAR1 DNA-binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF03121"	"Herpes_UL52"	"Herpesviridae UL52/UL70 DNA primase"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF03184"	"DDE_1"	"DDE superfamily endonuclease"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF03990"	"DUF348"	"Domain of unknown function (DUF348)"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF04198"	"Sugar-bind"	"Putative sugar-binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF04498"	"Pox_VP8_L4R"	"Poxvirus nucleic acid binding protein VP8/L4R"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF04786"	"Baculo_DNA_bind"	"ssDNA binding protein"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF04845"	"PurA"	"PurA ssDNA and RNA-binding protein"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF04921"	"XAP5"	"XAP5, circadian clock regulator"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF04967"	"HTH_10"	"HTH DNA binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF05043"	"Mga"	"Mga helix-turn-helix domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF05651"	"Diacid_rec"	"Putative sugar diacid recognition"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF05764"	"YL1"	"YL1 nuclear protein"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF06068"	"TIP49"	"TIP49 C-terminus"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF06279"	"DUF1033"	"Protein of unknown function (DUF1033)"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF06461"	"DUF1086"	"Domain of Unknown Function (DUF1086)"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF06719"	"AraC_N"	"AraC-type transcriptional regulator N-terminus"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF06839"	"zf-GRF"	"GRF zinc finger"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF07453"	"NUMOD1"	"NUMOD1 domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF07751"	"Abi_2"	"Abi-like protein"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF07879"	"PHB_acc_N"	"PHB/PHA accumulation regulator DNA-binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF07905"	"PucR"	"Purine catabolism regulatory protein-like family"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF08221"	"HTH_9"	"RNA polymerase III subunit RPC82 helix-turn-helix domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF08265"	"YL1_C"	"YL1 nuclear protein C-terminal domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF08280"	"HTH_Mga"	"M protein trans-acting positive regulator (MGA) HTH domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF08429"	"PLU-1"	"PLU-1-like protein"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF08605"	"Rad9_Rad53_bind"	"Fungal Rad9-like Rad53-binding"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF08664"	"YcbB"	"YcbB domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF08765"	"Mor"	"Mor transcription activator family"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF08775"	"ParB"	"ParB family"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF09103"	"BRCA-2_OB1"	"BRCA2, oligonucleotide/oligosaccharide-binding, domain 1"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF09202"	"Rio2_N"	"Rio2, N-terminal"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF09278"	"MerR-DNA-bind"	"MerR, DNA binding"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF09397"	"Ftsk_gamma"	"Ftsk gamma domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF10172"	"DDA1"	"Det1 complexing ubiquitin ligase"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF10330"	"Stb3"	"Putative Sin3 binding protein"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF10357"	"Kin17_mid"	"Domain of Kin17 curved DNA-binding protein"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF10373"	"EST1_DNA_bind"	"Est1 DNA/RNA binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF10384"	"Scm3"	"Centromere protein Scm3"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF10412"	"TrwB_AAD_bind"	"Type IV secretion-system coupling protein DNA-binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF10451"	"Stn1"	"Telomere regulation protein Stn1"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF10491"	"Nrf1_DNA-bind"	"NLS-binding and DNA-binding and dimerisation domains of Nrf1"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF10492"	"Nrf1_activ_bdg"	"Nrf1 activator activation site binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF10497"	"zf-4CXXC_R1"	"Zinc-finger domain of monoamine-oxidase A repressor R1"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF11268"	"DUF3071"	"Protein of unknown function (DUF3071)"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF11338"	"DUF3140"	"Protein of unknown function (DUF3140)"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF11740"	"KfrA_N"	"Plasmid replication region DNA-binding N-term"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF11972"	"HTH_13"	"HTH DNA binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF12169"	"DNA_pol3_gamma3"	"DNA polymerase III subunits gamma and tau domain III"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF12171"	"zf-C2H2_jaz"	"Zinc-finger double-stranded RNA-binding"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF12615"	"TraD_N"	"F sex factor protein N terminal"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF12674"	"Zn_ribbon_2"	"Putative zinc ribbon domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF12721"	"RHIM"	"RIP homotypic interaction motif"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF12738"	"PTCB-BRCT"	"twin BRCT domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF12793"	"SgrR_N"	"Sugar transport-related sRNA regulator N-term"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF12834"	"Phage_int_SAM_2"	"Phage integrase, N-terminal"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF12835"	"Integrase_1"	"Integrase"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF13276"	"HTH_21"	"HTH-like domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF13280"	"WYL"	"WYL domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF13408"	"Zn_ribbon_recom"	"Recombinase zinc beta ribbon domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF13467"	"RHH_4"	"Ribbon-helix-helix domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF13556"	"HTH_30"	"PucR C-terminal helix-turn-helix domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF13592"	"HTH_33"	"Winged helix-turn helix"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF13601"	"HTH_34"	"Winged helix DNA-binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF13873"	"Myb_DNA-bind_5"	"Myb/SANT-like DNA-binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF13891"	"zf-C3Hc3H"	"Potential DNA-binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF13907"	"DUF4208"	"Domain of unknown function (DUF4208)"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF14215"	"bHLH-MYC_N"	"bHLH-MYC and R2R3-MYB transcription factors N-terminal"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF14377"	"DUF4414"	"Domain of unknown function (DUF4414)"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF14579"	"HHH_6"	"Helix-hairpin-helix motif"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF14601"	"TFX_C"	"DNA_binding protein, TFX, C-term"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF14621"	"RFX5_DNA_bdg"	"RFX5 DNA-binding domain"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF15612"	"WHIM1"	"WSTF, HB1, Itc1p, MBD9 motif 1"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF15613"	"WSD"	"Williams-Beuren syndrome DDT (WSD), D-TOX E motif"	TRUE	TRUE	FALSE	FALSE	TRUE
+"PF03288"	"Pox_D5"	"Poxvirus D5 protein-like"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF03772"	"Competence"	"Competence protein"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF04032"	"Rpr2"	"RNAse P Rpr2/Rpp21/SNM1 subunit domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF04307"	"YdjM"	"LexA-binding, inner membrane-associated putative hydrolase"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF04503"	"SSDP"	"Single-stranded DNA binding protein, SSDP"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF04640"	"PLATZ"	"PLATZ transcription factor"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF05233"	"PHB_acc"	"PHB accumulation regulatory domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF05930"	"Phage_AlpA"	"Prophage CP4-57 regulatory protein (AlpA)"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF06224"	"HTH_42"	"Winged helix DNA-binding domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF07282"	"OrfB_Zn_ribbon"	"Putative transposase DNA-binding domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF08489"	"DUF1743"	"Domain of unknown function (DUF1743)"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF09739"	"MCM_bind"	"Mini-chromosome maintenance replisome factor"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF11325"	"DUF3127"	"Domain of unknown function (DUF3127)"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF12329"	"TMF_DNA_bd"	"TATA element modulatory factor 1 DNA binding"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF12625"	"Arabinose_bd"	"Arabinose-binding domain of AraC transcription regulator, N-term"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF12651"	"RHH_3"	"Ribbon-helix-helix domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF12728"	"HTH_17"	"Helix-turn-helix domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF12840"	"HTH_20"	"Helix-turn-helix domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF13309"	"HTH_22"	"HTH domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF13518"	"HTH_28"	"Helix-turn-helix domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF13551"	"HTH_29"	"Winged helix-turn helix"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF13744"	"HTH_37"	"Helix-turn-helix domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF13977"	"TetR_C_6"	"Bacterial transcriptional repressor"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF14090"	"HTH_39"	"Helix-turn-helix domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF14384"	"BrnA_antitoxin"	"BrnA antitoxin of type II toxin-antitoxin system"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF14549"	"P22_Cro"	"DNA-binding transcriptional regulator Cro"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF15963"	"Myb_DNA-bind_7"	"Myb DNA-binding like"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF15977"	"HTH_46"	"Winged helix-turn-helix DNA binding"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF16282"	"SANT_DAMP1_like"	"SANT/Myb-like domain of DAMP1"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF16859"	"TetR_C_11"	"Bacterial transcriptional repressor C-terminal"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF17191"	"RecG_wedge"	"RecG wedge domain"	TRUE	TRUE	FALSE	FALSE	FALSE
+"PF00105"	"zf-C4"	"Zinc finger, C4 type (two domains)"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF00136"	"DNA_pol_B"	"DNA polymerase family B"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF00552"	"IN_DBD_C"	"Integrase DNA binding domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF00562"	"RNA_pol_Rpb2_6"	"RNA polymerase Rpb2, domain 6"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF00870"	"P53"	"P53 DNA-binding domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF01316"	"Arg_repressor"	"Arginine repressor, DNA binding domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF01342"	"SAND"	"SAND domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF01498"	"HTH_Tnp_Tc3_2"	"Transposase"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF01530"	"zf-C2HC"	"Zinc finger, C2HC type"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF02217"	"T_Ag_DNA_bind"	"Origin of replication binding protein"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF02344"	"Myc-LZ"	"Myc leucine zipper domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF02864"	"STAT_bind"	"STAT protein, DNA binding domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF02905"	"EBV-NA1"	"Epstein Barr virus nuclear antigen-1, DNA-binding domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF03110"	"SBP"	"SBP domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF03131"	"bZIP_Maf"	"bZIP Maf transcription factor"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF03310"	"Cauli_DNA-bind"	"Caulimovirus DNA-binding protein"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF03871"	"RNA_pol_Rpb5_N"	"RNA polymerase Rpb5, N-terminal domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF03925"	"SeqA"	"SeqA protein C-terminal domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF04539"	"Sigma70_r3"	"Sigma-70 region 3"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF04560"	"RNA_pol_Rpb2_7"	"RNA polymerase Rpb2, domain 7"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF04621"	"ETS_PEA3_N"	"PEA3 subfamily ETS-domain transcription factor N terminal domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF04675"	"DNA_ligase_A_N"	"DNA ligase N terminus"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF05000"	"RNA_pol_Rpb1_4"	"RNA polymerase Rpb1, domain 4"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF05491"	"RuvB_C"	"Holliday junction DNA helicase ruvB C-terminus"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF07460"	"NUMOD3"	"NUMOD3 motif (2 copies)"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF08996"	"zf-DNA_Pol"	"DNA Polymerase alpha zinc finger"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF09003"	"Phage_integ_N"	"Bacteriophage lambda integrase, N-terminal domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF09077"	"Phage-MuB_C"	"Mu B transposition protein, C terminal"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF09270"	"BTD"	"Beta-trefoil DNA-binding domain"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF09271"	"LAG1-DNAbind"	"LAG1, DNA binding"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF10391"	"DNA_pol_lambd_f"	"Fingers domain of DNA polymerase lambda"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF10401"	"IRF-3"	"Interferon-regulatory factor 3"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF11427"	"HTH_Tnp_Tc3_1"	"Tc3 transposase"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF12189"	"VirE1"	"Single-strand DNA-binding protein"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF12940"	"RAG1"	"Recombination-activation protein 1 (RAG1), recombinase"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF15510"	"CENP-W"	"CENP-W protein"	TRUE	FALSE	TRUE	TRUE	TRUE
+"PF00554"	"RHD_DNA_bind"	"Rel homology DNA-binding domain"	TRUE	FALSE	TRUE	TRUE	FALSE
+"PF03834"	"Rad10"	"Binding domain of DNA repair protein Ercc1 (rad10/Swi10)"	TRUE	FALSE	TRUE	TRUE	FALSE
+"PF05261"	"Tra_M"	"TraM protein, DNA-binding"	TRUE	FALSE	TRUE	TRUE	FALSE
+"PF07497"	"Rho_RNA_bind"	"Rho termination factor, RNA-binding domain"	TRUE	FALSE	TRUE	TRUE	FALSE
+"PF08278"	"DnaG_DnaB_bind"	"DNA primase DnaG DnaB-binding"	TRUE	FALSE	TRUE	TRUE	FALSE
+"PF10410"	"DnaB_bind"	"DnaB-helicase binding domain of primase"	TRUE	FALSE	TRUE	TRUE	FALSE
+"PF02022"	"Integrase_Zn"	"Integrase Zinc binding domain"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF02135"	"zf-TAZ"	"TAZ zinc finger"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF02309"	"AUX_IAA"	"AUX/IAA family"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF02312"	"CBF_beta"	"Core binding factor beta subunit"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF02877"	"PARP_reg"	"Poly(ADP-ribose) polymerase, regulatory domain"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF03226"	"Yippee-Mis18"	"Yippee zinc-binding/DNA-binding /Mis18, centromere assembly"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF07463"	"NUMOD4"	"NUMOD4 motif"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF07498"	"Rho_N"	"Rho termination factor, N-terminal domain"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF07832"	"Bse634I"	"Cfr10I/Bse634I restriction endonuclease"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF08347"	"CTNNB1_binding"	"N-terminal CTNNB1 binding"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF08671"	"SinI"	"Anti-repressor SinI"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF08724"	"Rep_N"	"Rep protein catalytic domain like"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF08993"	"T4_Gp59_N"	"T4 gene Gp59 loader of gp41 DNA helicase"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF08994"	"T4_Gp59_C"	"T4 gene Gp59 loader of gp41 DNA helicase C-term"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF09110"	"HAND"	"HAND"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF09158"	"MotCF"	"Bacteriophage T4 MotA, C-terminal"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF09217"	"EcoRII-N"	"Restriction endonuclease EcoRII, N-terminal"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF09237"	"GAGA"	"GAGA factor"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF09287"	"CEP1-DNA_bind"	"CEP-1, DNA binding"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF09382"	"RQC"	"RQC domain"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF09386"	"ParD"	"Antitoxin ParD"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF09607"	"BrkDBD"	"Brinker DNA-binding domain"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF09734"	"Tau95"	"RNA polymerase III transcription factor (TF)IIIC subunit"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF10416"	"IBD"	"Transcription-initiator DNA-binding domain IBD"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF10635"	"DisA-linker"	"DisA bacterial checkpoint controller linker region"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF10743"	"Phage_Cox"	"Regulatory phage protein cox"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF11411"	"DNA_ligase_IV"	"DNA ligase IV"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF11569"	"Homez"	"Homeodomain leucine-zipper encoding, Homez"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF11825"	"Nuc_recep-AF1"	"Nuclear/hormone receptor activator site AF-1"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF12163"	"HobA"	"DNA replication regulator"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF12181"	"MogR_DNAbind"	"DNA binding domain of the motility gene repressor (MogR)"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF13972"	"TetR"	"Bacterial transcriptional repressor"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF14887"	"HMG_box_5"	"HMG (high mobility group) box 5"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF15289"	"RFXA_RFXANK_bdg"	"Regulatory factor X-associated C-terminal binding domain"	TRUE	FALSE	TRUE	FALSE	TRUE
+"PF02182"	"SAD_SRA"	"SAD/SRA domain"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF04873"	"EIN3"	"Ethylene insensitive 3"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF08585"	"RMI1_N"	"RecQ mediated genome instability protein"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF09038"	"53-BP1_Tudor"	"Tumour suppressor p53-binding protein-1 Tudor"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF09645"	"F-112"	"F-112 protein"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF11570"	"E2R135"	"Coiled-coil receptor-binding R-domain of colicin E2"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF15925"	"SOSSC"	"SOSS complex subunit C"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF16124"	"RecQ_Zn_bind"	"RecQ zinc-binding"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF16179"	"RHD_dimer"	"Rel homology dimerisation domain"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF16422"	"COE1_DBD"	"Transcription factor COE1 DNA-binding domain"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF16682"	"MSL2-CXC"	"CXC domain of E3 ubiquitin-protein ligase MSL2"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF16721"	"zf-H3C2"	"Zinc-finger like, probable DNA-binding"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF16773"	"Phage_SSB"	"Lactococcus phage single-stranded DNA binding protein"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF16783"	"FANCM-MHF_bd"	"FANCM to MHF binding domain"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF16834"	"CSM2"	"Shu complex component Csm2, DNA-binding"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF16836"	"PSY3"	"Shu complex component Psy3, DNA-binding description"	TRUE	FALSE	TRUE	FALSE	FALSE
+"PF00907"	"T-box"	"T-box"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF01287"	"eIF-5a"	"Eukaryotic elongation factor 5A hypusine, DNA-binding OB fold"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF01422"	"zf-NF-X1"	"NF-X1 type zinc finger"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF01623"	"Carla_C4"	"Carlavirus putative nucleic acid binding protein"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF01736"	"Polyoma_agno"	"Polyomavirus agnoprotein"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF03859"	"CG-1"	"CG-1 domain"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF03979"	"Sigma70_r1_1"	"Sigma-70 factor, region 1.1"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF04704"	"Zfx_Zfy_act"	"Zfx / Zfy transcription activation region"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF04988"	"AKAP95"	"A-kinase anchoring protein 95 (AKAP95)"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF05847"	"Baculo_LEF-3"	"Nucleopolyhedrovirus late expression factor 3 (LEF-3)"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF07404"	"TEBP_beta"	"Telomere-binding protein beta subunit (TEBP beta)"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF09048"	"Cro"	"Cro"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF09239"	"Topo-VIb_trans"	"Topoisomerase VI B subunit, transducer"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF10729"	"CedA"	"Cell division activator CedA"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF12658"	"Ten1"	"Telomere capping, CST complex subunit"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF13724"	"DNA_binding_2"	"DNA-binding domain"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF13922"	"PHD_3"	"PHD domain of transcriptional enhancer, Asx"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF14641"	"HTH_44"	"Helix-turn-helix DNA-binding domain of SPT6"	TRUE	FALSE	FALSE	TRUE	TRUE
+"PF02944"	"BESS"	"BESS motif"	TRUE	FALSE	FALSE	TRUE	FALSE
+"PF04732"	"Filament_head"	"Intermediate filament head (DNA binding) region"	TRUE	FALSE	FALSE	TRUE	FALSE
+"PF00898"	"Orbi_VP2"	"Orbivirus outer capsid protein VP2"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF01526"	"DDE_Tnp_Tn3"	"Tn3 transposase DDE domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF01696"	"Adeno_E1B_55K"	"Adenovirus EB1 55K protein / large t-antigen"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF01982"	"CTP-dep_RFKase"	"Domain of unknown function DUF120"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF02186"	"TFIIE_beta"	"TFIIE beta subunit core domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF02534"	"T4SS-DNA_transf"	"Type IV secretory system Conjugative DNA transfer"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF02650"	"HTH_WhiA"	"WhiA C-terminal HTH domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF02755"	"RPEL"	"RPEL repeat"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF02946"	"GTF2I"	"GTF2I-like repeat"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF03090"	"Replicase"	"Replicase family"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF03119"	"DNA_ligase_ZBD"	"NAD-dependent DNA ligase C4 zinc finger domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF03120"	"DNA_ligase_OB"	"NAD-dependent DNA ligase OB-fold domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF03123"	"CAT_RBD"	"CAT RNA binding domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF03165"	"MH1"	"MH1 domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF03584"	"Herpes_ICP4_N"	"Herpesvirus ICP4-like protein N-terminal region"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF03585"	"Herpes_ICP4_C"	"Herpesvirus ICP4-like protein C-terminal region"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF03634"	"TCP"	"TCP family transcription factor"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF03811"	"Zn_Tnp_IS1"	"InsA N-terminal domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF04236"	"Transp_Tc5_C"	"Tc5 transposase C-terminal domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF04384"	"Fe-S_assembly"	"Iron-sulphur cluster assembly"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF04623"	"Adeno_E1B_55K_N"	"Adenovirus E1B protein N-terminus"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF04641"	"Rtf2"	"Rtf2 RING-finger"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF04731"	"Caudal_act"	"Caudal like protein activation region"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF05101"	"VirB3"	"Type IV secretory pathway, VirB3-like protein"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF05191"	"ADK_lid"	"Adenylate kinase, active site lid"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF05265"	"DUF723"	"Protein of unknown function (DUF723)"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF05499"	"DMAP1"	"DNA methyltransferase 1-associated protein 1 (DMAP1)"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF05697"	"Trigger_N"	"Bacterial trigger factor protein (TF)"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF05698"	"Trigger_C"	"Bacterial trigger factor protein (TF) C-terminus"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF05876"	"Terminase_GpA"	"Phage terminase large subunit (GpA)"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF06217"	"GAGA_bind"	"GAGA binding protein-like family"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF06420"	"Mgm101p"	"Mitochondrial genome maintenance MGM101"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF06529"	"Vert_IL3-reg_TF"	"Vertebrate interleukin-3 regulated transcription factor"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF06640"	"P_C"	"P protein C-terminus"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF06892"	"Phage_CP76"	"Phage regulatory protein CII (CP76)"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF07042"	"TrfA"	"TrfA protein"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF07545"	"Vg_Tdu"	"Vestigial/Tondu family"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF07815"	"Abi_HHR"	"Abl-interactor HHR"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF07840"	"FadR_C"	"FadR C-terminal domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF07929"	"PRiA4_ORF3"	"Plasmid pRiA4b ORF-3-like protein"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF08169"	"RBB1NT"	"RBB1NT (NUC162) domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF08209"	"Sgf11"	"Sgf11 (transcriptional regulation protein)"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF08270"	"PRD_Mga"	"M protein trans-acting positive regulator (MGA) PRD domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF08599"	"Nbs1_C"	"DNA damage repair protein Nbs1"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF08679"	"DsrD"	"Dissimilatory sulfite reductase D (DsrD)"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF08879"	"WRC"	"WRC"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09010"	"AsiA"	"Anti-Sigma Factor A"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09033"	"DFF-C"	"DNA Fragmentation factor 45kDa, C terminal domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09061"	"Stirrup"	"Stirrup"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09062"	"Endonuc_subdom"	"PI-PfuI Endonuclease subdomain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09104"	"BRCA-2_OB3"	"BRCA2, oligonucleotide/oligosaccharide-binding, domain 3"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09105"	"SelB-wing_1"	"Elongation factor SelB, winged helix"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09106"	"SelB-wing_2"	"Elongation factor SelB, winged helix"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09107"	"SelB-wing_3"	"Elongation factor SelB, winged helix"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09121"	"Tower"	"Tower"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09124"	"Endonuc-dimeris"	"T4 recombination endonuclease VII, dimerisation"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09133"	"SANTA"	"SANTA (SANT Associated)"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09402"	"MSC"	"Man1-Src1p-C-terminal domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09441"	"Abp2"	"ARS binding protein 2"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09507"	"CDC27"	"DNA polymerase subunit Cdc27"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09625"	"VP9"	"VP9 protein"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF09904"	"HTH_43"	"Winged helix-turn helix"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF10134"	"RPA"	"Replication initiator protein A"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF10236"	"DAP3"	"Mitochondrial ribosomal death-associated protein 3"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF10298"	"WhiA_N"	"WhiA N-terminal LAGLIDADG-like domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF10473"	"CENP-F_leu_zip"	"Leucine-rich repeats of kinetochore protein Cenp-F/LEK1"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF10524"	"NfI_DNAbd_pre-N"	"Nuclear factor I protein pre-N-terminus"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF10537"	"WAC_Acf1_DNA_bd"	"ATP-utilising chromatin assembly and remodelling N-terminal"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF10545"	"MADF_DNA_bdg"	"Alcohol dehydrogenase transcription factor Myb/SANT-like"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF10576"	"EndIII_4Fe-2S"	"Iron-sulfur binding domain of endonuclease III"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF10680"	"RRN9"	"RNA polymerase I specific transcription initiation factor"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF10683"	"DBD_Tnp_Hermes"	"Hermes transposase DNA-binding domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11020"	"DUF2610"	"Domain of unknown function (DUF2610)"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11050"	"Viral_env_E26"	"Virus envelope protein E26"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11078"	"Optomotor-blind"	"Optomotor-blind protein N-terminal region"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11089"	"SyrA"	"Exopolysaccharide production repressor"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11418"	"Scaffolding_pro"	"Phi29 scaffolding protein"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11463"	"R-HINP1I"	"R.HinP1I restriction endonuclease"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11487"	"RestrictionSfiI"	"Type II restriction enzyme SfiI"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11490"	"DNA_pol3_a_NII"	"DNA polymerase III polC-type N-terminus II"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11498"	"Activator_LAG-3"	"Transcriptional activator LAG-3"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11510"	"FA_FANCE"	"Fanconi Anaemia group E protein FANCE"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11568"	"Med29"	"Mediator complex subunit 29"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11634"	"IPI_T4"	"Nuclease inhibitor from bacteriophage T4"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF11706"	"zf-CGNR"	"CGNR zinc finger"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12116"	"SpoIIID"	"Stage III sporulation protein D"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12136"	"RNA_pol_Rpo13"	"RNA polymerase Rpo13 subunit HTH domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12149"	"HSV_VP16_C"	"Herpes simplex virus virion protein 16 C terminal"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12168"	"DNA_pol3_tau_4"	"DNA polymerase III subunits tau domain IV DnaB-binding"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12170"	"DNA_pol3_tau_5"	"DNA polymerase III tau subunit V interacting with alpha"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12265"	"CAF1C_H4-bd"	"Histone-binding protein RBBP4 or subunit C of CAF1 complex"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12269"	"zf-CpG_bind_C"	"CpG binding protein zinc finger C terminal domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12539"	"Csm1"	"Chromosome segregation protein Csm1/Pcs1"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12653"	"DUF3785"	"Protein of unknown function (DUF3785)"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12659"	"Stn1_C"	"Telomere capping C-terminal wHTH"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12760"	"Zn_Tnp_IS1595"	"Transposase zinc-ribbon domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12776"	"Myb_DNA-bind_3"	"Myb/SANT-like DNA-binding domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12884"	"TORC_N"	"Transducer of regulated CREB activity, N terminus"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12885"	"TORC_M"	"Transducer of regulated CREB activity middle domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12886"	"TORC_C"	"Transducer of regulated CREB activity, C terminus"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF12950"	"TaqI_C"	"TaqI-like C-terminal specificity domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF13010"	"pRN1_helical"	"Primase helical domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF13305"	"WHG"	"WHG domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF13613"	"HTH_Tnp_4"	"Helix-turn-helix of DDE superfamily endonuclease"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF13866"	"zf-SAP30"	"SAP30 zinc-finger"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14048"	"MBD_C"	"C-terminal domain of methyl-CpG binding protein 2 and 3"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14072"	"DndB"	"DNA-sulfur modification-associated"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14156"	"AbbA_antirepres"	"Antirepressor AbbA"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14173"	"ComGG"	"ComG operon protein 7"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14250"	"AbrB-like"	"AbrB-like transcriptional regulator"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14474"	"RTC4"	"RTC4-like domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14480"	"DNA_pol3_a_NI"	"DNA polymerase III polC-type N-terminus I"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14657"	"Integrase_AP2"	"AP2-like DNA-binding integrase domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14700"	"RPOL_N"	"DNA-directed RNA polymerase N-terminal"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14705"	"Costars"	"Costars"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF14814"	"UB2H"	"Bifunctional transglycosylase second domain"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF15175"	"SPATA24"	"Spermatogenesis-associated protein 24"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF15476"	"SAP25"	"Histone deacetylase complex subunit SAP25"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF15539"	"CAF1-p150_C2"	"CAF1 complex subunit p150, region binding to CAF1-p60 at C-term"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF15620"	"CENP-C_mid"	"Centromere assembly component CENP-C middle DNMT3B-binding region"	TRUE	FALSE	FALSE	FALSE	TRUE
+"PF04684"	"BAF1_ABF1"	"BAF1 / ABF1 chromatin reorganising factor"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF05066"	"HARE-HTH"	"HB1, ASXL, restriction endonuclease HTH domain"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF06818"	"Fez1"	"Fez1"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF06855"	"YozE_SAM_like"	"YozE SAM-like fold"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF07336"	"ABATE"	"Putative stress-induced transcription regulator"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF07381"	"DUF1495"	"Winged helix DNA-binding domain (DUF1495)"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF07574"	"SMC_Nse1"	"Nse1 non-SMC component of SMC5-6 complex"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF07848"	"PaaX"	"PaaX-like protein"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF08683"	"CAMSAP_CKK"	"Microtubule-binding calmodulin-regulated spectrin-associated"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF08965"	"DUF1870"	"Domain of unknown function (DUF1870)"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF09292"	"Neil1-DNA_bind"	"Endonuclease VIII-like 1, DNA bind"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF09836"	"DUF2063"	"Putative DNA-binding domain"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF10195"	"Phospho_p8"	"DNA-binding nuclear phosphoprotein p8"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF10264"	"Stork_head"	"Winged helix Storkhead-box1 domain"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF10278"	"Med19"	"Mediator of RNA pol II transcription subunit 19"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF10280"	"Med11"	"Mediator complex protein"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF10341"	"TPP1"	"Shelterin complex subunit, TPP1/ACD"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF10407"	"Cytokin_check_N"	"Cdc14 phosphatase binding protein N-terminus"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF10505"	"NARG2_C"	"NMDA receptor-regulated gene protein 2 C-terminus"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF11056"	"UvsY"	"Recombination, repair and ssDNA binding protein UvsY"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF11372"	"DUF3173"	"Domain of unknown function (DUF3173)"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF11495"	"Regulator_TrmB"	"Archaeal transcriptional regulator TrmB"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF11650"	"P22_Tail-4"	"P22 tail accessory factor"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF12203"	"HDAC4_Gln"	"Glutamine rich N terminal domain of histone deacetylase 4"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF12374"	"Dmrt1"	"Double-sex mab3 related transcription factor 1"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF12639"	"Colicin-DNase"	"DNase/tRNase domain of colicin-like bacteriocin"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF13017"	"Maelstrom"	"piRNA pathway germ-plasm component"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF13021"	"DUF3885"	"Domain of unknown function (DUF3885)"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF13824"	"zf-Mss51"	"Zinc-finger of mitochondrial splicing suppressor 51"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF13893"	"RRM_5"	"RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF14706"	"Tnp_DNA_bind"	"Transposase DNA-binding"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF14826"	"FACT-Spt16_Nlob"	"FACT complex subunit SPT16 N-terminal lobe domain"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF14847"	"Ras_bdg_2"	"Ras-binding domain of Byr2"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF14929"	"TAF1_subA"	"TAF RNA Polymerase I subunit A"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF14952"	"zf-tcix"	"Putative treble-clef, zinc-finger, Zn-binding"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF15227"	"zf-C3HC4_4"	"zinc finger of C3HC4-type, RING"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF15364"	"PAXIP1_C"	"PAXIP1-associated-protein-1 C term PTIP binding protein"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF15557"	"CAF1-p150_N"	"CAF1 complex subunit p150, region binding to PCNA"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF15791"	"DMRT-like"	"Doublesex-and mab-3-related transcription factor C1 and C2"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF15868"	"MBF2"	"Transcription activator MBF2"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF16100"	"RMI2"	"RecQ-mediated genome instability protein 2"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF16243"	"Sm_like"	"Sm_like domain"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF16487"	"ArgoMid"	"Mid domain of argonaute"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF16563"	"P66_CC"	"Coiled-coil and interaction region of P66A and P66B with MBD2"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF16730"	"DnaGprimase_HBD"	"DnaG-primase C-terminal, helicase-binding domain"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF16812"	"AdHead_fibreRBD"	"C-terminal head domain of the fowl adenovirus type 1 long fibre"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF17007"	"HTH_micro"	"HTH-like"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF17026"	"zf-RRPl_C4"	"Putative ribonucleoprotein zinc-finger pf C4 type"	TRUE	FALSE	FALSE	FALSE	FALSE
+"PF00046"	"Homeobox"	"Homeobox domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00125"	"Histone"	"Core histone H2A/H2B/H3/H4"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00126"	"HTH_1"	"Bacterial regulatory helix-turn-helix protein, lysR family"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00170"	"bZIP_1"	"bZIP transcription factor"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00172"	"Zn_clus"	"Fungal Zn(2)-Cys(6) binuclear cluster domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00178"	"Ets"	"Ets-domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00196"	"GerE"	"Bacterial regulatory proteins, luxR family"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00239"	"Resolvase"	"Resolvase, N terminal domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00250"	"Forkhead"	"Forkhead domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00320"	"GATA"	"GATA zinc finger"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00376"	"MerR"	"MerR family regulatory protein"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00392"	"GntR"	"Bacterial regulatory proteins, gntR family"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00440"	"TetR_N"	"Bacterial regulatory proteins, tetR family"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00486"	"Trans_reg_C"	"Transcriptional regulatory protein, C terminal"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00493"	"MCM"	"MCM2/3/5 family"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00521"	"DNA_topoisoIV"	"DNA gyrase/topoisomerase IV, subunit A"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00538"	"Linker_histone"	"linker histone H1 and H5 family"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00645"	"zf-PARP"	"Poly(ADP-ribose) polymerase and DNA-Ligase Zn-finger region"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00808"	"CBFD_NFYB_HMF"	"Histone-like transcription factor (CBF/NF-Y) and archaeal histone"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00816"	"Histone_HNS"	"H-NS histone family"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00847"	"AP2"	"AP2 domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF01028"	"Topoisom_I"	"Eukaryotic DNA topoisomerase I, catalytic core"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF01149"	"Fapy_DNA_glyco"	"Formamidopyrimidine-DNA glycosylase N-terminal domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF01420"	"Methylase_S"	"Type I restriction modification DNA specificity domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF01475"	"FUR"	"Ferric uptake regulator family"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF01997"	"Translin"	"Translin family"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF02045"	"CBFB_NFYA"	"CCAAT-binding transcription factor (CBF-B/NF-YA) subunit B"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF02365"	"NAM"	"No apical meristem (NAM) protein"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF02796"	"HTH_7"	"Helix-turn-helix domain of resolvase"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF02954"	"HTH_8"	"Bacterial regulatory protein, Fis family"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF04014"	"MazE_antitoxin"	"Antidote-toxin recognition MazE, bacterial antitoxin"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF04542"	"Sigma70_r2"	"Sigma-70 region 2"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF04545"	"Sigma70_r4"	"Sigma-70, region 4"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF05269"	"Phage_CII"	"Bacteriophage CII protein"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF07716"	"bZIP_2"	"Basic region leucine zipper"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF08281"	"Sigma70_r4_2"	"Sigma-70, region 4"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF08299"	"Bac_DnaA_C"	"Bacterial dnaA protein helix-turn-helix"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF09339"	"HTH_IclR"	"IclR helix-turn-helix domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF12833"	"HTH_18"	"Helix-turn-helix domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF13404"	"HTH_AsnC-type"	"AsnC-type helix-turn-helix domain"	FALSE	TRUE	TRUE	TRUE	TRUE
+"PF00325"	"Crp"	"Bacterial regulatory proteins, crp family"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF00356"	"LacI"	"Bacterial regulatory proteins, lacI family"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF00589"	"Phage_integrase"	"Phage integrase family"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF01119"	"DNA_mis_repair"	"DNA mismatch repair protein, C-terminal domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF01191"	"RNA_pol_Rpb5_C"	"RNA polymerase Rpb5, C-terminal domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF01192"	"RNA_pol_Rpb6"	"RNA polymerase Rpb6"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF01194"	"RNA_pol_N"	"RNA polymerases N / 8 kDa subunit"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF01272"	"GreA_GreB"	"Transcription elongation factor, GreA/GreB, C-term"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF02198"	"SAM_PNT"	"Sterile alpha motif (SAM)/Pointed domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF02452"	"PemK_toxin"	"PemK-like, MazF-like toxin of type II toxin-antitoxin system"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF02732"	"ERCC4"	"ERCC4 domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF02742"	"Fe_dep_repr_C"	"Iron dependent repressor, metal binding and dimerisation domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF02914"	"DDE_2"	"Bacteriophage Mu transposase"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF03604"	"DNA_RNApol_7kD"	"DNA directed RNA polymerase, 7 kDa subunit"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF03730"	"Ku_C"	"Ku70/Ku80 C-terminal arm"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF03989"	"DNA_gyraseA_C"	"DNA gyrase C-terminal domain, beta-propeller"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF04042"	"DNA_pol_E_B"	"DNA polymerase alpha/epsilon subunit B"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF04057"	"Rep-A_N"	"Replication factor-A protein 1, N-terminal domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF04726"	"Microvir_J"	"Microvirus J protein"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF04851"	"ResIII"	"Type III restriction enzyme, res subunit"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF05920"	"Homeobox_KN"	"Homeobox KN domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF06870"	"RNA_pol_I_A49"	"A49-like RNA polymerase I associated factor"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF07229"	"VirE2"	"VirE2"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF07702"	"UTRA"	"UTRA domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF08361"	"TetR_C_2"	"MAATS-type transcriptional repressor, C-terminal region"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF08661"	"Rep_fac-A_3"	"Replication factor A protein 3"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF09280"	"XPC-binding"	"XPC-binding domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF12009"	"Telomerase_RBD"	"Telomerase ribonucleoprotein complex - RNA binding domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF14659"	"Phage_int_SAM_3"	"Phage integrase, N-terminal SAM-like domain"	FALSE	TRUE	TRUE	TRUE	FALSE
+"PF00004"	"AAA"	"ATPase family associated with various cellular activities (AAA)"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00012"	"HSP70"	"Hsp70 protein"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00092"	"VWA"	"von Willebrand factor type A domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00097"	"zf-C3HC4"	"Zinc finger, C3HC4 type (RING finger)"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00098"	"zf-CCHC"	"Zinc knuckle"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00158"	"Sigma54_activat"	"Sigma-54 interaction domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00382"	"TFIIB"	"Transcription factor TFIIB repeat"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00385"	"Chromo"	"Chromo (CHRromatin Organisation MOdifier) domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00412"	"LIM"	"LIM domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00439"	"Bromodomain"	"Bromodomain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00498"	"FHA"	"FHA domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00505"	"HMG_box"	"HMG (high mobility group) box"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00565"	"SNase"	"Staphylococcal nuclease homologue"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00569"	"ZZ"	"Zinc finger, ZZ type"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00570"	"HRDC"	"HRDC domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00628"	"PHD"	"PHD-finger"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00642"	"zf-CCCH"	"Zinc finger C-x8-C-x5-C-x3-H type (and similar)"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00875"	"DNA_photolyase"	"DNA photolyase"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01037"	"AsnC_trans_reg"	"Lrp/AsnC ligand binding domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01096"	"TFIIS_C"	"Transcription factor S-II (TFIIS)"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01261"	"AP_endonuc_2"	"Xylose isomerase-like TIM barrel"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01330"	"RuvA_N"	"RuvA N terminal domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01428"	"zf-AN1"	"AN1-like Zinc finger"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01541"	"GIY-YIG"	"GIY-YIG catalytic domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01556"	"DnaJ_C"	"DnaJ C terminal domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01614"	"IclR"	"Bacterial transcriptional regulator"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01661"	"Macro"	"Macro domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01693"	"Cauli_VI"	"Caulimovirus viroplasmin"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01753"	"zf-MYND"	"MYND finger"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01909"	"NTP_transf_2"	"Nucleotidyltransferase domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF01918"	"Alba"	"Alba"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF02151"	"UVR"	"UvrB/uvrC motif"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF02518"	"HATPase_c"	"Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF03466"	"LysR_substrate"	"LysR substrate binding domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF03472"	"Autoind_bind"	"Autoinducer binding domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF03749"	"SfsA"	"Sugar fermentation stimulation protein"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF04084"	"ORC2"	"Origin recognition complex subunit 2"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF07499"	"RuvA_C"	"RuvA, C-terminal domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF08214"	"HAT_KAT11"	"Histone acetylation protein"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF08271"	"TF_Zn_Ribbon"	"TFIIB zinc-binding"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF08279"	"HTH_11"	"HTH domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF08423"	"Rad51"	"Rad51"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF08646"	"Rep_fac-A_C"	"Replication factor-A C terminal domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF09329"	"zf-primase"	"Primase zinc finger"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF10283"	"zf-CCHH"	"Zinc-finger (CX5CX6HX5H) motif"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF11967"	"RecO_N"	"Recombination protein O N terminal"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF13304"	"AAA_21"	"AAA domain, putative AbiEii toxin, Type IV TA system"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF13639"	"zf-RING_2"	"Ring finger domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF13855"	"LRR_8"	"Leucine rich repeat"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF14551"	"MCM_N"	"MCM N-terminal domain"	FALSE	TRUE	TRUE	FALSE	TRUE
+"PF00005"	"ABC_tran"	"ABC transporter"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00006"	"ATP-synt_ab"	"ATP synthase alpha/beta family, nucleotide-binding domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00008"	"EGF"	"EGF-like domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00013"	"KH_1"	"KH domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00018"	"SH3_1"	"SH3 domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00022"	"Actin"	"Actin"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00023"	"Ank"	"Ankyrin repeat"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00027"	"cNMP_binding"	"Cyclic nucleotide-binding domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00035"	"dsrm"	"Double-stranded RNA binding motif"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00056"	"Ldh_1_N"	"lactate/malate dehydrogenase, NAD binding domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00069"	"Pkinase"	"Protein kinase domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00071"	"Ras"	"Ras family"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00075"	"RNase_H"	"RNase H"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00078"	"RVT_1"	"Reverse transcriptase (RNA-dependent DNA polymerase)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00085"	"Thioredoxin"	"Thioredoxin"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00089"	"Trypsin"	"Trypsin"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00106"	"adh_short"	"short chain dehydrogenase"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00112"	"Peptidase_C1"	"Papain family cysteine protease"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00128"	"Alpha-amylase"	"Alpha amylase, catalytic domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00149"	"Metallophos"	"Calcineurin-like phosphoesterase"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00156"	"Pribosyltran"	"Phosphoribosyl transferase domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00176"	"SNF2_N"	"SNF2 family N-terminal domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00179"	"UQ_con"	"Ubiquitin-conjugating enzyme"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00210"	"Ferritin"	"Ferritin-like domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00225"	"Kinesin"	"Kinesin motor domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00226"	"DnaJ"	"DnaJ domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00240"	"ubiquitin"	"Ubiquitin family"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00270"	"DEAD"	"DEAD/DEAH box helicase"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00271"	"Helicase_C"	"Helicase conserved C-terminal domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00293"	"NUDIX"	"NUDIX domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00400"	"WD40"	"WD domain, G-beta repeat"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00415"	"RCC1"	"Regulator of chromosome condensation (RCC1) repeat"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00443"	"UCH"	"Ubiquitin carboxyl-terminal hydrolase"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00462"	"Glutaredoxin"	"Glutaredoxin"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00536"	"SAM_1"	"SAM domain (Sterile alpha motif)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00545"	"Ribonuclease"	"ribonuclease"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00550"	"PP-binding"	"Phosphopantetheine attachment site"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00551"	"Formyl_trans_N"	"Formyl transferase"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00564"	"PB1"	"PB1 domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00575"	"S1"	"S1 RNA binding domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00595"	"PDZ"	"PDZ domain (Also known as DHR or GLGF)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00620"	"RhoGAP"	"RhoGAP domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00627"	"UBA"	"UBA/TS-N domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00651"	"BTB"	"BTB/POZ domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00717"	"Peptidase_S24"	"Peptidase S24-like"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00752"	"XPG_N"	"XPG N-terminal domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00855"	"PWWP"	"PWWP domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00856"	"SET"	"SET domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00867"	"XPG_I"	"XPG I-region"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00888"	"Cullin"	"Cullin family"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00929"	"RNase_T"	"Exonuclease"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01230"	"HIT"	"HIT domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01248"	"Ribosomal_L7Ae"	"Ribosomal protein L7Ae/L30e/S12e/Gadd45 family"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01286"	"XPA_N"	"XPA protein N-terminal"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01423"	"LSM"	"LSM domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01426"	"BAH"	"BAH domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01590"	"GAF"	"GAF domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01612"	"DNA_pol_A_exo1"	"3'-5' exonuclease"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01619"	"Pro_dh"	"Proline dehydrogenase"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01656"	"CbiA"	"CobQ/CobB/MinD/ParA nucleotide binding domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01713"	"Smr"	"Smr domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01722"	"BolA"	"BolA-like protein"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01850"	"PIN"	"PIN domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF01966"	"HD"	"HD domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02082"	"Rrf2"	"Transcriptional regulator"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02190"	"LON_substr_bdg"	"ATP-dependent protease La (LON) substrate-binding domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02195"	"ParBc"	"ParB-like nuclease domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02301"	"HORMA"	"HORMA domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02481"	"DNA_processg_A"	"DNA recombination-mediator protein A"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02565"	"RecO_C"	"Recombination protein O C terminal"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02629"	"CoA_binding"	"CoA binding domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02661"	"Fic"	"Fic/DOC family"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02852"	"Pyr_redox_dim"	"Pyridine nucleotide-disulphide oxidoreductase, dimerisation domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02866"	"Ldh_1_C"	"lactate/malate dehydrogenase, alpha/beta C-terminal domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02870"	"Methyltransf_1N"	"6-O-methylguanine DNA methyltransferase, ribonuclease-like domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF02885"	"Glycos_trans_3N"	"Glycosyl transferase family, helical bundle domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF03129"	"HGTP_anticodon"	"Anticodon binding domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF03167"	"UDG"	"Uracil DNA glycosylase superfamily"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF03372"	"Exo_endo_phos"	"Endonuclease/Exonuclease/phosphatase family"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF03731"	"Ku_N"	"Ku70/Ku80 N-terminal alpha/beta domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF03787"	"RAMPs"	"RAMP superfamily"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF03870"	"RNA_pol_Rpb8"	"RNA polymerase Rpb8"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF03876"	"SHS2_Rpb7-N"	"SHS2 domain found in N terminus of Rpb7p/Rpc25p/MJ0397"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF04002"	"RadC"	"RadC-like JAB domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF04023"	"FeoA"	"FeoA domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF04073"	"tRNA_edit"	"Aminoacyl-tRNA editing domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF04098"	"Rad52_Rad22"	"Rad52/22 family double-strand break repair protein"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF04297"	"UPF0122"	"Putative helix-turn-helix protein, YlxM / p13 like"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF04814"	"HNF-1_N"	"Hepatocyte nuclear factor 1 (HNF-1), N terminus"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF05181"	"XPA_C"	"XPA protein C-terminus"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF05406"	"WGR"	"WGR domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF05584"	"Sulfolobus_pRN"	"Sulfolobus plasmid regulatory protein"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF06470"	"SMC_hinge"	"SMC proteins Flexible Hinge Domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF07106"	"TBPIP"	"Tat binding protein 1(TBP-1)-interacting protein (TBPIP)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF07500"	"TFIIS_M"	"Transcription factor S-II (TFIIS), central domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF07533"	"BRK"	"BRK domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF07582"	"AP_endonuc_2_N"	"AP endonuclease family 2 C terminus"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF07647"	"SAM_2"	"SAM domain (Sterile alpha motif)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF07686"	"V-set"	"Immunoglobulin V-set domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF07714"	"Pkinase_Tyr"	"Protein tyrosine kinase"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF07739"	"TipAS"	"TipAS antibiotic-recognition domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF07992"	"Pyr_redox_2"	"Pyridine nucleotide-disulphide oxidoreductase"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF08205"	"C2-set_2"	"CD80-like C2-set immunoglobulin domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF08536"	"Whirly"	"Whirly transcription factor"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF08542"	"Rep_fac_C"	"Replication factor C C-terminal domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF08645"	"PNK3P"	"Polynucleotide kinase 3 phosphatase"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF08676"	"MutL_C"	"MutL C terminal dimerisation domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF08708"	"PriCT_1"	"Primase C terminal 1 (PriCT-1)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF08766"	"DEK_C"	"DEK C terminal domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF08785"	"Ku_PK_bind"	"Ku C terminal domain like"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF09035"	"Tn916-Xis"	"Excisionase from transposon Tn916"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF09299"	"Mu-transpos_C"	"Mu transposase, C-terminal"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF10387"	"DUF2442"	"Protein of unknown function (DUF2442)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF10433"	"MMS1_N"	"Mono-functional DNA-alkylating methyl methanesulfonate N-term"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF10557"	"Cullin_Nedd8"	"Cullin protein neddylation domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF11467"	"LEDGF"	"Lens epithelium-derived growth factor (LEDGF)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF11506"	"DUF3217"	"Protein of unknown function (DUF3217)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF11626"	"Rap1_C"	"TRF2-interacting telomeric protein/Rap1 - C terminal domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF11774"	"Lsr2"	"Lsr2"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF11969"	"DcpS_C"	"Scavenger mRNA decapping enzyme C-term binding"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF11976"	"Rad60-SLD"	"Ubiquitin-2 like Rad60 SUMO-like"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF12347"	"HJURP_C"	"Holliday junction regulator protein family C-terminal repeat"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF12796"	"Ank_2"	"Ankyrin repeats (3 copies)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF12867"	"DinB_2"	"DinB superfamily"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF12872"	"OST-HTH"	"OST-HTH/LOTUS domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF12874"	"zf-met"	"Zinc-finger of C2H2 type"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF12895"	"ANAPC3"	"Anaphase-promoting complex, cyclosome, subunit 3"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13086"	"AAA_11"	"AAA domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13087"	"AAA_12"	"AAA domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13155"	"Toprim_2"	"Toprim-like"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13175"	"AAA_15"	"AAA ATPase domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13191"	"AAA_16"	"AAA ATPase domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13202"	"EF-hand_5"	"EF hand"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13426"	"PAS_9"	"PAS domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13456"	"RVT_3"	"Reverse transcriptase-like"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13476"	"AAA_23"	"AAA domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13499"	"EF-hand_7"	"EF-hand domain pair"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13513"	"HEAT_EZ"	"HEAT-like repeat"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13516"	"LRR_6"	"Leucine Rich repeat"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13532"	"2OG-FeII_Oxy_2"	"2OG-Fe(II) oxygenase superfamily"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13545"	"HTH_Crp_2"	"Crp-like helix-turn-helix domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13558"	"SbcCD_C"	"Putative exonuclease SbcCD, C subunit"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13560"	"HTH_31"	"Helix-turn-helix domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13589"	"HATPase_c_3"	"Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13614"	"AAA_31"	"AAA domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13637"	"Ank_4"	"Ankyrin repeats (many copies)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13656"	"RNA_pol_L_2"	"RNA polymerase Rpb3/Rpb11 dimerisation domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13671"	"AAA_33"	"AAA domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13833"	"EF-hand_8"	"EF-hand domain pair"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13894"	"zf-C2H2_4"	"C2H2-type zinc finger"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13912"	"zf-C2H2_6"	"C2H2-type zinc finger"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13923"	"zf-C3HC4_2"	"Zinc finger, C3HC4 type (RING finger)"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13927"	"Ig_3"	"Immunoglobulin domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF13975"	"gag-asp_proteas"	"gag-polyprotein putative aspartyl protease"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF14447"	"Prok-RING_4"	"Prokaryotic RING finger family 4"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF14520"	"HHH_5"	"Helix-hairpin-helix domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF14604"	"SH3_9"	"Variant SH3 domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF14716"	"HHH_8"	"Helix-hairpin-helix domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF14890"	"Intein_splicing"	"Intein splicing domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF14947"	"HTH_45"	"Winged helix-turn-helix"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF15723"	"MqsR_toxin"	"Motility quorum-sensing regulator, toxin of MqsA"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF16207"	"RAWUL"	"RAWUL domain RING finger- and  WD40-associated ubiquitin-like"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF16413"	"Mlh1_C"	"DNA mismatch repair protein Mlh1 C-terminus"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF16512"	"RhoGAP-FF1"	"p190-A and -B Rho GAPs FF domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF16589"	"BRCT_2"	"BRCT domain, a BRCA1 C-terminus domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF16759"	"LIG3_BRCT"	"DNA ligase 3 BRCT domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF16770"	"RTT107_BRCT_5"	"Regulator of Ty1 transposition protein 107 BRCT domain"	FALSE	TRUE	TRUE	FALSE	FALSE
+"PF00309"	"Sigma54_AID"	"Sigma-54 factor, Activator interacting domain (AID)"	FALSE	TRUE	FALSE	TRUE	TRUE
+"PF02892"	"zf-BED"	"BED zinc finger"	FALSE	TRUE	FALSE	TRUE	TRUE
+"PF03118"	"RNA_pol_A_CTD"	"Bacterial RNA polymerase, alpha chain C terminal domain"	FALSE	TRUE	FALSE	TRUE	TRUE
+"PF03374"	"ANT"	"Phage antirepressor protein KilAC domain"	FALSE	TRUE	FALSE	TRUE	TRUE
+"PF07508"	"Recombinase"	"Recombinase"	FALSE	TRUE	FALSE	TRUE	TRUE
+"PF08220"	"HTH_DeoR"	"DeoR-like helix-turn-helix domain"	FALSE	TRUE	FALSE	TRUE	TRUE
+"PF13411"	"MerR_1"	"MerR HTH family regulatory protein"	FALSE	TRUE	FALSE	TRUE	TRUE
+"PF13413"	"HTH_25"	"Helix-turn-helix domain"	FALSE	TRUE	FALSE	TRUE	TRUE
+"PF00772"	"DnaB"	"DnaB-like helicase N terminal domain"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF01418"	"HTH_6"	"Helix-turn-helix domain, rpiR family"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF01527"	"HTH_Tnp_1"	"Transposase"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF01548"	"DEDD_Tnp_IS110"	"Transposase"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF01555"	"N6_N4_Mtase"	"DNA methylase"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF01609"	"DDE_Tnp_1"	"Transposase DDE domain"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF02183"	"HALZ"	"Homeobox associated leucine zipper"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF02486"	"Rep_trans"	"Replication initiation factor"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF03837"	"RecT"	"RecT family"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF04082"	"Fungal_trans"	"Fungal specific transcription factor domain"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF04471"	"Mrr_cat"	"Restriction endonuclease"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF04931"	"DNA_pol_phi"	"DNA polymerase phi"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF04986"	"Y2_Tnp"	"Putative transposase"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF05132"	"RNA_pol_Rpc4"	"RNA polymerase III RPC4"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF05158"	"RNA_pol_Rpc34"	"RNA polymerase Rpc34 subunit"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF05645"	"RNA_pol_Rpc82"	"RNA polymerase III subunit RPC82"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF06144"	"DNA_pol3_delta"	"DNA polymerase III, delta subunit"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF06506"	"PrpR_N"	"Propionate catabolism activator"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF07022"	"Phage_CI_repr"	"Bacteriophage CI repressor helix-turn-helix domain"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF07382"	"HC2"	"Histone H1-like nucleoprotein HC2"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF07432"	"Hc1"	"Histone H1-like protein Hc1"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF07527"	"Hairy_orange"	"Hairy Orange"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF07669"	"Eco57I"	"Eco57I restriction-modification methylase"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF07777"	"MFMR"	"G-box binding protein MFMR"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF08073"	"CHDNT"	"CHDNT (NUC034) domain"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF08074"	"CHDCT2"	"CHDCT2 (NUC038) domain"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF08273"	"Prim_Zn_Ribbon"	"Zinc-binding domain of primase-helicase"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF08493"	"AflR"	"Aflatoxin regulatory protein"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF08711"	"Med26"	"TFIIS helical bundle-like domain"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF08769"	"Spo0A_C"	"Sporulation initiation factor Spo0A C terminal"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF09416"	"UPF1_Zn_bind"	"RNA helicase (UPF2 interacting domain)"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF14144"	"DOG1"	"Seed dormancy control"	FALSE	TRUE	FALSE	TRUE	FALSE
+"PF00001"	"7tm_1"	"7 transmembrane receptor (rhodopsin family)"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00163"	"Ribosomal_S4"	"Ribosomal protein S4/S9 N-terminal domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00191"	"Annexin"	"Annexin"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00454"	"PI3_PI4_kinase"	"Phosphatidylinositol 3- and 4-kinase"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00480"	"ROK"	"ROK family"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00560"	"LRR_1"	"Leucine Rich Repeat"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00567"	"TUDOR"	"Tudor domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00634"	"BRCA2"	"BRCA2 repeat"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00641"	"zf-RanBP"	"Zn-finger in Ran binding protein and others"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00643"	"zf-B_box"	"B-box zinc finger"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00891"	"Methyltransf_2"	"O-methyltransferase"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF01258"	"zf-dskA_traR"	"Prokaryotic dksA/traR C4-type zinc finger"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF01363"	"FYVE"	"FYVE zinc finger"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF01480"	"PWI"	"PWI domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF01485"	"IBR"	"IBR domain, a half RING-finger domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF01585"	"G-patch"	"G-patch domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF01739"	"CheR"	"CheR methyltransferase, SAM binding domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF02148"	"zf-UBP"	"Zn-finger in ubiquitin-hydrolases and other protein"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF02179"	"BAG"	"BAG domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF02201"	"SWIB"	"SWIB/MDM2 domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF02207"	"zf-UBR"	"Putative zinc finger in N-recognin (UBR box)"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF02671"	"PAH"	"Paired amphipathic helix repeat"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF02809"	"UIM"	"Ubiquitin interaction motif"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF02829"	"3H"	"3H domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF02854"	"MIF4G"	"MIF4G domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF02891"	"zf-MIZ"	"MIZ/SP-RING zinc finger"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF02909"	"TetR_C"	"Tetracyclin repressor, C-terminal all-alpha domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF03474"	"DMA"	"DMRTA motif"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF03693"	"ParD_antitoxin"	"Bacterial antitoxin of ParD toxin-antitoxin type II system and RHH"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF03754"	"DUF313"	"Domain of unknown function (DUF313)"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF03861"	"ANTAR"	"ANTAR domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF03884"	"DUF329"	"Domain of unknown function (DUF329)"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF04127"	"DFP"	"DNA / pantothenate metabolism flavoprotein"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF04221"	"RelB"	"RelB antitoxin"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF04433"	"SWIRM"	"SWIRM domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF04434"	"SWIM"	"SWIM zinc finger"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF04468"	"PSP1"	"PSP1 C-terminal conserved region"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF05063"	"MT-A70"	"MT-A70"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF05168"	"HEPN"	"HEPN domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF05495"	"zf-CHY"	"CHY zinc finger"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF06029"	"AlkA_N"	"AlkA N-terminal domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF06146"	"PsiE"	"Phosphate-starvation-inducible E"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF06200"	"tify"	"tify domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF07529"	"HSA"	"HSA"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF07724"	"AAA_2"	"AAA domain (Cdc48 subfamily)"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF07741"	"BRF1"	"Brf1-like TBP-binding domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF07776"	"zf-AD"	"Zinc-finger associated domain (zf-AD)"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF08243"	"SPT2"	"SPT2 chromatin protein"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF08263"	"LRRNT_2"	"Leucine rich repeat N-terminal domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF08348"	"PAS_6"	"YheO-like PAS domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF08378"	"NERD"	"Nuclease-related domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF08401"	"DUF1738"	"Domain of unknown function (DUF1738)"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF09088"	"MIF4G_like"	"MIF4G like"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF09090"	"MIF4G_like_2"	"MIF4G like"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF09337"	"zf-H2C2"	"His(2)-Cys(2) zinc finger"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF10543"	"ORF6N"	"ORF6N domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF10544"	"T5orf172"	"T5orf172 domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF12533"	"Neuro_bHLH"	"Neuronal helix-loop-helix transcription factor"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF13581"	"HATPase_c_2"	"Histidine kinase-like ATPase domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF13662"	"Toprim_4"	"Toprim domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF13880"	"Acetyltransf_13"	"ESCO1/2 acetyl-transferase"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF14634"	"zf-RING_5"	"zinc-RING finger domain"	FALSE	TRUE	FALSE	FALSE	TRUE
+"PF00104"	"Hormone_recep"	"Ligand-binding domain of nuclear hormone receptor"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF00154"	"RecA"	"recA bacterial DNA recombination protein"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF00157"	"Pou"	"Pou domain - N-terminal to homeobox domain"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF00269"	"SASP"	"Small, acid-soluble spore proteins, alpha/beta type"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF00352"	"TBP"	"Transcription factor TFIID (or TATA-binding protein, TBP)"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF00511"	"PPV_E2_C"	"E2 (early) protein, C terminal"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF00519"	"PPV_E1_C"	"Papillomavirus helicase"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF00605"	"IRF"	"Interferon regulatory factor transcription factor"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF00853"	"Runt"	"Runt domain"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF00960"	"Neocarzinostat"	"Neocarzinostatin family"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF01017"	"STAT_alpha"	"STAT protein, all-alpha domain"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF01068"	"DNA_ligase_A_M"	"ATP dependent DNA ligase domain"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF01131"	"Topoisom_bac"	"DNA topoisomerase"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF01285"	"TEA"	"TEA/ATTS domain family"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF01340"	"MetJ"	"Met Apo-repressor, MetJ"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF01371"	"Trp_repressor"	"Trp repressor protein"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF02159"	"Oest_recep"	"Oestrogen receptor"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF02161"	"Prog_receptor"	"Progesterone receptor"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF02384"	"N6_Mtase"	"N-6 DNA Methylase"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF02961"	"BAF"	"Barrier to autointegration factor"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF03574"	"Peptidase_S48"	"Peptidase family S48"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF05460"	"ORC6"	"Origin recognition complex subunit 6 (ORC6)"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF06303"	"MatP"	"Organiser of macrodomain of Terminus of chromosome"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF06431"	"Polyoma_lg_T_C"	"Polyomavirus large T antigen C-terminus"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF06507"	"Auxin_resp"	"Auxin response factor"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF06632"	"XRCC4"	"DNA double-strand break repair and V(D)J recombination protein XRCC4"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF07034"	"ORC3_N"	"Origin recognition complex (ORC) subunit 3 N-terminus"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF07352"	"Phage_Mu_Gam"	"Bacteriophage Mu Gam like protein"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF11520"	"Cren7"	"Chromatin protein Cren7"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF12619"	"MCM2_N"	"Mini-chromosome maintenance protein 2"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF15490"	"Ten1_2"	"Telomere-capping, CST complex subunit"	FALSE	FALSE	TRUE	TRUE	TRUE
+"PF00204"	"DNA_gyraseB"	"DNA gyrase B"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF00476"	"DNA_pol_A"	"DNA polymerase family A"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF00623"	"RNA_pol_Rpb1_2"	"RNA polymerase Rpb1, domain 2"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF00705"	"PCNA_N"	"Proliferating cell nuclear antigen, N-terminal domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF00712"	"DNA_pol3_beta"	"DNA polymerase III beta subunit, N-terminal domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF00817"	"IMS"	"impB/mucB/samB family"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF00961"	"LAGLIDADG_1"	"LAGLIDADG endonuclease"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF00986"	"DNA_gyraseB_C"	"DNA gyrase B subunit, carboxyl terminus"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF01056"	"Myc_N"	"Myc amino-terminal region"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF01076"	"Mob_Pre"	"Plasmid recombination enzyme"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF01771"	"Herpes_alk_exo"	"Herpesvirus alkaline exonuclease"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF01797"	"Y1_Tnp"	"Transposase IS200 like"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF01834"	"XRCC1_N"	"XRCC1 N terminal domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF02023"	"SCAN"	"SCAN domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF02150"	"RNA_POL_M_15KD"	"RNA polymerases M/15 Kd subunit"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF02282"	"Herpes_UL42"	"DNA polymerase processivity factor (UL42)"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF02334"	"RTP"	"Replication terminator protein"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF02536"	"mTERF"	"mTERF"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF02747"	"PCNA_C"	"Proliferating cell nuclear antigen, C-terminal domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF02768"	"DNA_pol3_beta_3"	"DNA polymerase III beta subunit, C-terminal domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF02899"	"Phage_int_SAM_1"	"Phage integrase, N-terminal SAM-like domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF03835"	"Rad4"	"Rad4 transglutaminase-like domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF03965"	"Penicillinase_R"	"Penicillinase repressor"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF04561"	"RNA_pol_Rpb2_2"	"RNA polymerase Rpb2, domain 2"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF04563"	"RNA_pol_Rpb2_1"	"RNA polymerase beta subunit"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF04565"	"RNA_pol_Rpb2_3"	"RNA polymerase Rpb2, domain 3"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF04566"	"RNA_pol_Rpb2_4"	"RNA polymerase Rpb2, domain 4"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF04567"	"RNA_pol_Rpb2_5"	"RNA polymerase Rpb2, domain 5"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF04983"	"RNA_pol_Rpb1_3"	"RNA polymerase Rpb1, domain 3"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF04990"	"RNA_pol_Rpb1_7"	"RNA polymerase Rpb1, domain 7"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF04992"	"RNA_pol_Rpb1_6"	"RNA polymerase Rpb1, domain 6"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF04997"	"RNA_pol_Rpb1_1"	"RNA polymerase Rpb1, domain 1"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF04998"	"RNA_pol_Rpb1_5"	"RNA polymerase Rpb1, domain 5"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF05001"	"RNA_pol_Rpb1_R"	"RNA polymerase Rpb1 C-terminal repeat"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF05443"	"ROS_MUCR"	"ROS/MUCR transcriptional regulator protein"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF06018"	"CodY"	"CodY GAF-like domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF06613"	"KorB_C"	"KorB C-terminal beta-barrel domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF07531"	"TAFH"	"NHR1 homology to TAF"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF07825"	"Exc"	"Excisionase-like protein"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF08272"	"Topo_Zn_Ribbon"	"Topoisomerase I zinc-ribbon-like"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF08360"	"TetR_C_5"	"QacR-like protein, C-terminal region"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF09026"	"CENP-B_dimeris"	"Centromere protein B dimerisation domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF09266"	"VirDNA-topo-I_N"	"Viral DNA topoisomerase I, N-terminal"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF10403"	"BHD_1"	"Rad4 beta-hairpin domain 1"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF10404"	"BHD_2"	"Rad4 beta-hairpin domain 2"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF10405"	"BHD_3"	"Rad4 beta-hairpin domain 3"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF11799"	"IMS_C"	"impB/mucB/samB family C-terminal domain"	FALSE	FALSE	TRUE	TRUE	FALSE
+"PF00074"	"RnaseA"	"Pancreatic ribonuclease"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF00308"	"Bac_DnaA"	"Bacterial dnaA  protein"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF01393"	"Chromo_shadow"	"Chromo shadow domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF01853"	"MOZ_SAS"	"MOZ/SAS family"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF02017"	"CIDE-N"	"CIDE-N domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF02237"	"BPL_C"	"Biotin protein ligase C terminal domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF02863"	"Arg_repressor_C"	"Arginine repressor, C-terminal domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF02916"	"DNA_PPF"	"DNA polymerase processivity factor"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF03104"	"DNA_pol_B_exo1"	"DNA polymerase family B, exonuclease domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF03166"	"MH2"	"MH2 domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF03344"	"Daxx"	"Daxx N-terminal Rassf1C-interacting domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF04104"	"DNA_primase_lrg"	"Eukaryotic and archaeal DNA primase, large subunit"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF04679"	"DNA_ligase_A_C"	"ATP dependent DNA ligase C terminal region"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF06720"	"Phi-29_GP16_7"	"Bacteriophage phi-29 early protein GP16.7"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF07443"	"HARP"	"HepA-related protein (HARP)"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF07710"	"P53_tetramer"	"P53 tetramerisation motif"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF08788"	"NHR2"	"NHR2 domain like"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF08790"	"zf-LYAR"	"LYAR-type C2HC zinc finger"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF08798"	"CRISPR_assoc"	"CRISPR associated protein"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF09114"	"MotA_activ"	"Transcription factor MotA, activation domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF09225"	"Endonuc-PvuII"	"Restriction endonuclease PvuII"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF09233"	"Endonuc-EcoRV"	"Restriction endonuclease EcoRV"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF09517"	"RE_Eco29kI"	"Eco29kI restriction endonuclease"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF10426"	"zf-RAG1"	"Recombination-activating protein 1 zinc-finger domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF10523"	"BEN"	"BEN domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF10525"	"Engrail_1_C_sig"	"Engrailed homeobox C-terminal signature domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF12678"	"zf-rbx1"	"RING-H2 zinc finger domain"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF14630"	"ORC5_C"	"Origin recognition complex (ORC) subunit 5 C-terminus"	FALSE	FALSE	TRUE	FALSE	TRUE
+"PF00140"	"Sigma70_r1_2"	"Sigma-70 factor, region 1.2"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF00292"	"PAX"	"'Paired box' domain"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF00859"	"CTF_NFI"	"CTF/NF-I family transcription modulation region"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF01101"	"HMG14_17"	"HMG14 and HMG17"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF01223"	"Endonuclease_NS"	"DNA/RNA non-specific endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF01486"	"K-box"	"K-box region"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF01628"	"HrcA"	"HrcA protein C terminal domain"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF01754"	"zf-A20"	"A20-like zinc finger"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF02155"	"GCR"	"Glucocorticoid receptor"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF02166"	"Androgen_recep"	"Androgen receptor"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF02459"	"Adeno_terminal"	"Adenoviral DNA terminal protein"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF02865"	"STAT_int"	"STAT protein, protein interaction domain"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF02963"	"EcoRI"	"Restriction endonuclease EcoRI"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF02976"	"MutH"	"DNA mismatch repair enzyme MutH"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF02980"	"FokI_C"	"Restriction endonuclease FokI, catalytic domain"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF02981"	"FokI_N"	"Restriction endonuclease FokI, recognition domain"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF03529"	"TF_Otx"	"Otx1 transcription factor"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF03615"	"GCM"	"GCM motif protein"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF03792"	"PBC"	"PBC domain"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF04313"	"HSDR_N"	"Type I restriction enzyme R protein N terminus (HSDR_N)"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF04546"	"Sigma70_ner"	"Sigma-70, non-essential region"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF04555"	"XhoI"	"Restriction endonuclease XhoI"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF04556"	"DpnII"	"DpnII restriction endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF05044"	"HPD"	"Homeo-prospero domain"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF06616"	"BsuBI_PstI_RE"	"BsuBI/PstI restriction endonuclease C-terminus"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF08198"	"Thymopoietin"	"Thymopoietin protein"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09019"	"EcoRII-C"	"EcoRII C terminal"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09030"	"Creb_binding"	"Creb binding"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09194"	"Endonuc-BsobI"	"Restriction endonuclease BsobI"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09208"	"Endonuc-MspI"	"Restriction endonuclease MspI"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09226"	"Endonuc-HincII"	"Restriction endonuclease HincII"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09254"	"Endonuc-FokI_C"	"Restriction endonuclease FokI, C terminal"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09519"	"RE_HindVP"	"HindVP restriction endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09520"	"RE_TdeIII"	"Type II restriction endonuclease, TdeIII"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09521"	"RE_NgoPII"	"NgoPII restriction endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09553"	"RE_Eco47II"	"Eco47II restriction endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09567"	"RE_MamI"	"MamI restriction endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09568"	"RE_MjaI"	"MjaI restriction endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09570"	"RE_SinI"	"SinI restriction endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09571"	"RE_XcyI"	"XcyI restriction endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09572"	"RE_XamI"	"XamI restriction endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF09573"	"RE_TaqI"	"TaqI restriction endonuclease"	FALSE	FALSE	FALSE	TRUE	TRUE
+"PF00242"	"DNA_pol_viral_N"	"DNA polymerase (viral) N-terminal domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF00260"	"Protamine_P1"	"Protamine P1"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF00424"	"REV"	"REV protein (anti-repression trans-activator protein)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF00518"	"E6"	"Early Protein (E6)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF00527"	"E7"	"E7 protein, Early protein"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF00539"	"Tat"	"Transactivating regulatory protein (Tat)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF00841"	"Protamine_P2"	"Sperm histone P2"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF00845"	"Gemini_BL1"	"Geminivirus BL1 movement protein"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF00872"	"Transposase_mut"	"Transposase, Mutator family"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF00940"	"RNA_pol"	"DNA-dependent RNA polymerase"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF01166"	"TSC22"	"TSC-22/dip/bun family"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF01254"	"TP2"	"Nuclear transition protein 2"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF01367"	"5_3_exonuc"	"5'-3' exonuclease, C-terminal SAM fold"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF01446"	"Rep_1"	"Replication protein"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF01610"	"DDE_Tnp_ISL3"	"Transposase"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF01698"	"FLO_LFY"	"Floricaula / Leafy protein"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF01719"	"Rep_2"	"Plasmid replication protein"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF02079"	"TP1"	"Nuclear transition protein 1"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF02200"	"STE"	"STE like transcription factor"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF02232"	"Alpha_TIF"	"Alpha trans-inducing protein (Alpha-TIF)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF02245"	"Pur_DNA_glyco"	"Methylpurine-DNA glycosylase (MPG)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF02583"	"Trns_repr_metal"	"Metal-sensitive transcriptional repressor"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF02739"	"5_3_exonuc_N"	"5'-3' exonuclease, N-terminal resolvase-like domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF02969"	"TAF"	"TATA box binding protein associated factor (TAF)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03089"	"RAG2"	"Recombination activating protein 2"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03175"	"DNA_pol_B_2"	"DNA polymerase type B, organellar and viral"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03293"	"Pox_RNA_pol"	"Poxvirus DNA-directed RNA polymerase, 18 kD subunit"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03294"	"Pox_Rap94"	"RNA polymerase-associated transcription specificity factor, Rap94"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03327"	"Herpes_VP19C"	"Herpesvirus capsid shell protein VP19C"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03396"	"Pox_RNA_pol_35"	"Poxvirus DNA-directed RNA polymerase, 35 kD subunit"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03400"	"DDE_Tnp_IS1"	"IS1 transposase"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03449"	"GreA_GreB_N"	"Transcription elongation factor, N-terminal"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03533"	"SPO11_like"	"SPO11 homologue"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03589"	"Antiterm"	"Antitermination protein"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03614"	"Flag1_repress"	"Repressor of phase-1 flagellin"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03789"	"ELK"	"ELK domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03790"	"KNOX1"	"KNOX1 domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF03791"	"KNOX2"	"KNOX2 domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF04310"	"MukB"	"MukB N-terminal"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF04364"	"DNA_pol3_chi"	"DNA polymerase III chi subunit, HolC"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF04611"	"AalphaY_MDB"	"Mating type protein A alpha Y mating type dependent binding region"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF04769"	"MATalpha_HMGbox"	"Mating-type protein MAT alpha 1 HMG-box"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF04848"	"Pox_A22"	"Poxvirus A22 protein"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF04941"	"LEF-8"	"Late expression factor 8 (LEF-8)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05204"	"Hom_end"	"Homing endonuclease"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05234"	"UAF_Rrn10"	"UAF complex subunit Rrn10"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05273"	"Pox_RNA_Pol_22"	"Poxvirus RNA polymerase 22 kDa subunit"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05280"	"FlhC"	"Flagellar transcriptional activator (FlhC)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05320"	"Pox_RNA_Pol_19"	"Poxvirus DNA-directed RNA polymerase 19 kDa subunit"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05349"	"GATA-N"	"GATA-type transcription activator, N-terminal"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05722"	"Ustilago_mating"	"Ustilago B locus mating-type protein"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05793"	"TFIIF_alpha"	"Transcription initiation factor IIF, alpha subunit (TFIIF-alpha)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05829"	"Adeno_PX"	"Adenovirus late L2 mu core protein (Protein X)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05848"	"CtsR"	"Firmicute transcriptional repressor of class III stress genes (CtsR)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05864"	"Chordopox_RPO7"	"Chordopoxvirus DNA-directed RNA polymerase 7 kDa polypeptide (RPO7)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05869"	"Dam"	"DNA N-6-adenine-methyltransferase (Dam)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF05944"	"Phage_term_smal"	"Phage small terminase subunit"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF06061"	"Baculo_ME53"	"Baculoviridae ME53"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF06440"	"DNA_pol3_theta"	"DNA polymerase III, theta subunit"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF06530"	"Phage_antitermQ"	"Phage antitermination protein Q"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF06546"	"Vert_HS_TF"	"Vertebrate heat shock transcription factor"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF06621"	"SIM_C"	"Single-minded protein C-terminus"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF06953"	"ArsD"	"Arsenical resistance operon trans-acting repressor ArsD"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF07057"	"TraI"	"DNA helicase TraI"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF07571"	"TAF6_C"	"TAF6 C-terminal HEAT repeat domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF07573"	"AreA_N"	"Nitrogen regulatory protein AreA N terminus"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF08070"	"DTHCT"	"DTHCT (NUC029) region"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF08072"	"BDHCT"	"BDHCT (NUC031) domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF08163"	"NUC194"	"NUC194 domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF08188"	"Protamine_3"	"Spermatozal protamine family"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF08463"	"EcoEI_R_C"	"EcoEI R protein C-terminal"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF08529"	"NusA_N"	"NusA N-terminal domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF09115"	"DNApol3-delta_C"	"DNA polymerase III, delta subunit, C terminal"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF09293"	"RNaseH_C"	"T4 RNase H, C terminal"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF10297"	"Hap4_Hap_bind"	"Minimal binding motif of Hap4 for binding to Hap2/3/5"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF12162"	"STAT1_TAZ2bind"	"STAT1 TAZ2 binding domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF13397"	"RbpA"	"RNA polymerase-binding protein"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF13495"	"Phage_int_SAM_4"	"Phage integrase, N-terminal SAM-like domain"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF14372"	"DUF4413"	"Domain of unknown function (DUF4413)"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF15333"	"TAF1D"	"TATA box-binding protein-associated factor 1D"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF15337"	"Vasculin"	"Vascular protein family Vasculin-like 1"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF15489"	"CTC1"	"CST, telomere maintenance, complex subunit CTC1"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF15497"	"SNAPc19"	"snRNA-activating protein complex subunit 19, SNAPc subunit 19"	FALSE	FALSE	FALSE	TRUE	FALSE
+"PF00002"	"7tm_2"	"7 transmembrane receptor (Secretin family)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00003"	"7tm_3"	"7 transmembrane sweet-taste receptor of 3 GCPR"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00028"	"Cadherin"	"Cadherin domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00039"	"fn1"	"Fibronectin type I domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00040"	"fn2"	"Fibronectin type II domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00094"	"VWD"	"von Willebrand factor type D domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00186"	"DHFR_1"	"Dihydrofolate reductase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00268"	"Ribonuc_red_sm"	"Ribonucleotide reductase, small chain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00330"	"Aconitase"	"Aconitase family (aconitate hydratase)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00380"	"Ribosomal_S9"	"Ribosomal protein S9/S16"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00524"	"PPV_E1_N"	"E1 Protein, N terminal domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00580"	"UvrD-helicase"	"UvrD/REP helicase N-terminal domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00603"	"Flu_PA"	"Influenza RNA-dependent RNA polymerase subunit PA"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00692"	"dUTPase"	"dUTPase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00850"	"Hist_deacetyl"	"Histone deacetylase domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00910"	"RNA_helicase"	"RNA helicase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00946"	"Mononeg_RNA_pol"	"Mononegavirales RNA dependent RNA polymerase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF00972"	"Flavi_NS5"	"Flavivirus RNA-directed RNA polymerase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01007"	"IRK"	"Inward rectifier potassium channel"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01025"	"GrpE"	"GrpE"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01057"	"Parvo_NS1"	"Parvovirus non-structural protein NS1"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01176"	"eIF-1a"	"Translation initiation factor 1A / IF-1"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01234"	"NNMT_PNMT_TEMT"	"NNMT/PNMT/TEMT family"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01352"	"KRAB"	"KRAB box"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01462"	"LRRNT"	"Leucine rich repeat N-terminal domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01463"	"LRRCT"	"Leucine rich repeat C-terminal domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01466"	"Skp1"	"Skp1 family, dimerisation domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01529"	"zf-DHHC"	"DHHC palmitoyltransferase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01816"	"LRV"	"Leucine rich repeat variant"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF01868"	"UPF0086"	"Domain of unknown function UPF0086"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02042"	"RWP-RK"	"RWP-RK domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02086"	"MethyltransfD12"	"D12 class N6 adenine-specific DNA methyltransferase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02123"	"RdRP_4"	"Viral RNA-directed RNA-polymerase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02354"	"Latrophilin"	"Latrophilin Cytoplasmic C-terminal region"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02402"	"Lysis_col"	"Lysis protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02560"	"Cyanate_lyase"	"Cyanate lyase C-terminal domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02703"	"Adeno_E1A"	"Early E1A protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02793"	"HRM"	"Hormone receptor domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02923"	"BamHI"	"Restriction endonuclease BamHI"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02953"	"zf-Tim10_DDP"	"Tim10/DDP family zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF02957"	"TT_ORF2"	"TT viral ORF2"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03020"	"LEM"	"LEM domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03052"	"Adeno_52K"	"Adenoviral protein L1 52/55-kDa"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03274"	"Foamy_BEL"	"Foamy virus BEL 1/2 protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03299"	"TF_AP-2"	"Transcription factor AP-2"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03367"	"zf-ZPR1"	"ZPR1 zinc-finger domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03402"	"V1R"	"Vomeronasal organ pheromone receptor family, V1R"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03431"	"RNA_replicase_B"	"RNA replicase, beta-chain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03484"	"B5"	"tRNA synthetase B5 domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03542"	"Tuberin"	"Tuberin"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03638"	"TCR"	"Tesmin/TSO1-like CXC domain, cysteine-rich domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03705"	"CheR_N"	"CheR methyltransferase, all-alpha domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03707"	"MHYT"	"Bacterial signalling protein N terminal repeat"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03726"	"PNPase"	"Polyribonucleotide nucleotidyltransferase, RNA binding domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03826"	"OAR"	"OAR domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03854"	"zf-P11"	"P-11 zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03902"	"Gal4_dimer"	"Gal4-like dimerisation domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03903"	"Phage_T4_gp36"	"Phage T4 tail fibre"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03931"	"Skp1_POZ"	"Skp1 family, tetramerisation domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF03998"	"Utp11"	"Utp11 protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04003"	"Utp12"	"Dip2/Utp12 Family"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04090"	"RNA_pol_I_TF"	"RNA polymerase I specific initiation factor"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04192"	"Utp21"	"Utp21 specific WD40 associated putative domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04197"	"Birna_RdRp"	"Birnavirus RNA dependent RNA polymerase (VP1)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04269"	"DUF440"	"Protein of unknown function, DUF440"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04438"	"zf-HIT"	"HIT zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04500"	"FLYWCH"	"FLYWCH zinc finger domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04528"	"Adeno_E4_34"	"Adenovirus early E4 34 kDa protein conserved region"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04606"	"Ogr_Delta"	"Ogr/Delta-like zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04615"	"Utp14"	"Utp14 protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04648"	"MF_alpha"	"Yeast mating factor alpha hormone"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04770"	"ZF-HD_dimer"	"ZF-HD protein dimerisation region"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04771"	"CAV_VP3"	"Chicken anaemia virus VP-3 protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04810"	"zf-Sec23_Sec24"	"Sec23/Sec24 zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04852"	"DUF640"	"Protein of unknown function (DUF640)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF04934"	"Med6"	"MED6 mediator sub complex component"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF05180"	"zf-DNL"	"DNL zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF05207"	"zf-CSL"	"CSL zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF05386"	"TEP1_N"	"TEP1 N-terminal domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF05389"	"MecA"	"Negative regulator of genetic competence (MecA)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF05413"	"Peptidase_C34"	"Putative closterovirus papain-like endopeptidase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF05715"	"zf-piccolo"	"Piccolo Zn-finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF05772"	"NinB"	"NinB protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF05916"	"Sld5"	"GINS complex protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF06220"	"zf-U1"	"U1 zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF06221"	"zf-C2HC5"	"Putative zinc finger motif, C2HC5-type"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF06300"	"Tsp45I"	"Tsp45I type II restriction enzyme"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF06338"	"ComK"	"ComK protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF06434"	"Aconitase_2_N"	"Aconitate hydratase 2 N-terminus"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF06442"	"DHFR_2"	"R67 dihydrofolate reductase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF06467"	"zf-FCS"	"MYM-type Zinc finger with FCS sequence motif"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF06689"	"zf-C4_ClpX"	"ClpX C4-type zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF06943"	"zf-LSD1"	"LSD1 zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF07503"	"zf-HYPF"	"HypF finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF07530"	"PRE_C2HC"	"Associated with zinc fingers"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF07535"	"zf-DBF"	"DBF zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF07562"	"NCD3G"	"Nine Cysteines Domain of family 3 GPCR"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF07723"	"LRR_2"	"Leucine Rich Repeat"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF07725"	"LRR_3"	"Leucine Rich Repeat"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF07967"	"zf-C3HC"	"C3HC zinc finger-like"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08050"	"Tet_res_leader"	"Tetracycline resistance leader peptide"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08076"	"TetM_leader"	"Tetracycline resistance determinant leader peptide"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08080"	"zf-RNPHF"	"RNPHF zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08191"	"LRR_adjacent"	"LRR adjacent"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08266"	"Cadherin_2"	"Cadherin-like"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08290"	"Hep_core_N"	"Hepatitis core protein, putative zinc finger"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08362"	"TetR_C_3"	"YcdC-like protein, C-terminal region"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08466"	"IRK_N"	"Inward rectifier potassium channel N-terminal"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08625"	"Utp13"	"Utp13 specific WD40 associated domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08780"	"NTase_sub_bind"	"Nucleotidyltransferase substrate binding protein like"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08839"	"CDT1"	"DNA replication factor CDT1 like"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF08919"	"F_actin_bind"	"F-actin binding"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09008"	"Head_binding"	"Head binding"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09015"	"NgoMIV_restric"	"NgoMIV restriction enzyme"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09126"	"NaeI"	"Restriction endonuclease NaeI"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09171"	"DUF1886"	"Domain of unknown function (DUF1886)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09195"	"Endonuc-BglII"	"Restriction endonuclease BglII"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09214"	"Prd1-P2"	"Bacteriophage Prd1, adsorption protein P2"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09230"	"DFF40"	"DNA fragmentation factor 40 kDa"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09247"	"TBP-binding"	"TATA box-binding protein binding"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09267"	"Dict-STAT-coil"	"Dictyostelium STAT, coiled coil"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09370"	"PEP_hydrolase"	"Phosphoenolpyruvate hydrolase-like"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09453"	"HIRA_B"	"HIRA B motif"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09491"	"RE_AlwI"	"AlwI restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09499"	"RE_ApaLI"	"ApaLI-like restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09504"	"RE_Bsp6I"	"Bsp6I restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09510"	"Rtt102p"	"Rtt102p-like transcription regulator protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09516"	"RE_CfrBI"	"CfrBI restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09518"	"RE_HindIII"	"HindIII restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09522"	"RE_R_Pab1"	"R.Pab1 restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09545"	"RE_AccI"	"AccI restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09554"	"RE_HaeII"	"HaeII restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09556"	"RE_HaeIII"	"HaeIII restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09561"	"RE_HpaII"	"HpaII restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09562"	"RE_LlaMI"	"LlaMI restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09564"	"RE_NgoBV"	"NgoBV restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09565"	"RE_NgoFVII"	"NgoFVII restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09566"	"RE_SacI"	"SacI restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09569"	"RE_ScaI"	"ScaI restriction endonuclease"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09596"	"MamL-1"	"MamL-1 domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF09665"	"RE_Alw26IDE"	"Type II restriction endonuclease (RE_Alw26IDE)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF10122"	"Mu-like_Com"	"Mu-like prophage protein Com"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF10146"	"zf-C4H2"	"Zinc finger-containing protein"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF10276"	"zf-CHCC"	"Zinc-finger domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF10300"	"DUF3808"	"Protein of unknown function (DUF3808)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF10719"	"ComFB"	"Late competence development protein ComFB"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF10798"	"YmgB"	"Biofilm development protein YmgB/AriR"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF10957"	"DUF2758"	"Protein of unknown function (DUF2758)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF11033"	"ComJ"	"Competence protein J (ComJ)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF11407"	"RestrictionMunI"	"Type II restriction enzyme MunI"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF11564"	"BpuJI_N"	"Restriction endonuclease BpuJI - N terminal"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF11619"	"P53_C"	"Transcription factor P53 - C terminal domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF11791"	"Aconitase_B_N"	"Aconitate B N-terminal domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF12120"	"Arr-ms"	"Rifampin ADP-ribosyl transferase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF12404"	"DUF3663"	"Peptidase"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF12598"	"TBX"	"T-box transcription factor"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF12906"	"RINGv"	"RING-variant domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF13011"	"LZ_Tnp_IS481"	"leucine-zipper of insertion element IS481"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF13114"	"RecO_N_2"	"RecO N terminal"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF13250"	"DUF4041"	"Domain of unknown function (DUF4041)"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF13361"	"UvrD_C"	"UvrD-like helicase C-terminal domain"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF13878"	"zf-C2H2_3"	"zinc-finger of acetyl-transferase ESCO"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF14766"	"RPA_interact_N"	"Replication protein A interacting N-terminal"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF14768"	"RPA_interact_C"	"Replication protein A interacting C-terminal"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF14770"	"TMEM18"	"Transmembrane protein 18"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF15063"	"TC1"	"Thyroid cancer protein 1"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF15322"	"PMSI1"	"Protein missing in infertile sperm 1, putative"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF15412"	"Nse4-Nse3_bdg"	"Binding domain of Nse4/EID3 to Nse3-MAGE"	FALSE	FALSE	FALSE	FALSE	TRUE
+"PF15629"	"Perm-CXXC"	"Permuted single zf-CXXC unit"	FALSE	FALSE	FALSE	FALSE	TRUE
