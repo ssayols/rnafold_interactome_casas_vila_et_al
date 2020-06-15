@@ -1,4 +1,4 @@
-Code assocaited with Casas-Vila N, Sayols S, Pérez-Martínez L, Scheibe M, Butter F. The RNA fold interactome of evolutionary conserved RNA structures in S. cerevisiae. Nat Commun. 2020;11(1):2789. Published 2020 Jun 3. doi:10.1038/s41467-020-16555-4.
+Code assocaited with Casas-Vila N, Sayols S, Pérez-Martínez L, Scheibe M, Butter F. _The RNA fold interactome of evolutionary conserved RNA structures in S. cerevisiae_. Nat Commun. 2020;11(1):2789. Published 2020 Jun 3. doi:10.1038/s41467-020-16555-4.
 
 ### Contents
 
