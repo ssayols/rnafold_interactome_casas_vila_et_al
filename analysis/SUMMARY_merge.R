@@ -125,16 +125,16 @@ ALL$hsapiens_homolog_go_rna_bind <- orth$go_rna_bind[match(ALL$yORF, orth$ensemb
 ALL$hsapiens_homolog_go_rna_rel  <- orth$go_rna_rel[match(ALL$yORF, orth$ensembl_gene_id)]
 
 ##
-## is Parker's table?
+## is Mitchell's table?
 ##
-parker <- read.delim("./analysis/db/yeastRBP_Parker.txt", comment="#")
-ALL$Parker <- ALL$yORF %in% parker$Systematic.Name
+mitchell <- read.delim("./analysis/db/yeastRBP_Mitchell.txt", comment="#")  # former Parker
+ALL$Mitchell <- ALL$yORF %in% mitchell$Systematic.Name
 
 ##
-## in Gerber's table?
+## in Matia_Gonzalez's table?
 ##
-gerber <- read.delim("./analysis/db/yeastRBP_Gerber.txt", comment="#")
-ALL$Gerber <- ALL$yORF %in% gerber$ORF
+matia_gonzalez <- read.delim("./analysis/db/yeastRBP_Matia_Gonzalez.txt", comment="#")  # former Gerber
+ALL$Matia_Gonzalez <- ALL$yORF %in% matia_gonzalez$ORF
 
 ##
 ## in Merve's table? take ProteinID col

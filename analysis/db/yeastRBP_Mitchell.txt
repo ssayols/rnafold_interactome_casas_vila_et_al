@@ -1,0 +1,122 @@
+# 120 yeas tRBPs from Parker
+Systematic Name	Gene	Previously Known RNA Target	Function	% coverage repplicate 1	% coverage replicate 2	Peptide Count Replicate 1	Peptide Count Replicate 2
+YER155C	Bem2	none	Other	4.43	10.52	7	17
+YOR198C	Bfr1	unknown	Translation	60.92	61.06	44	52
+YPL217C	Bms1	snoRNA	Ribosome Synthesis	3.21	8.62	3	8
+YNR051C	Bre5	mRNA	Other	44.85	44.47	16	19
+YLR175W	Cbf5	snoRNA, rRNA	Ribosome Synthesis	25.05	39.7	11	14
+YDR155C	Cpr1	none	Other	20.99	41.98	2	6
+YGR155W	Cys4	none	Metabolism	13.52	37.87	6	16
+YPL119C	Dbp1	unknown	Translation	21.24	16.05	8	10
+YLR276C	Dbp9	rRNA	Ribosome Synthesis	7.91	18.35	4	9
+YOR204W	Ded1	mRNA	Translation	50.66	53.48	25	30
+YDL160C	Dhh1	mRNA	Decay	18.38	28.46	8	12
+YLR401C	Dus3	tRNA	tRNA Modification	22.75	18.86	10	9
+YKL204W	Eap1	unknown	Translation Repression	11.11	18.99	6	9
+YKL172W	Ebp2	rRNA	Ribosome Synthesis	12.24	12.21	5	8
+YER176W	Ecm32	none	Translation	9.55	20.96	9	20
+YCL011C	Gbp2	mRNA	Export	48.95	60.38	23	24
+YNL255C	Gis2	mRNA	Translation	35.95	62.75	4	8
+YOR168W	Gln4	tRNA	tRNA Synthetase	18.42	19.69	11	13
+YGL245W	Gus1	tRNA	tRNA Synthetase	25.85	26.24	14	16
+YNL004W	Hrb1	mRNA	Export	55.24	48.95	26	21
+YOL123W	Hrp1	mRNA	Nuclear Processing	38.01	38.58	16	3
+YPR033C	Hts1	tRNA	tRNA Synthetase	24.52	45.6	10	16
+YHR216W	Imd2	none	Metabolism	33.27	46.85	12	20
+YLR432W	Imd3	none	Metabolism	50.67	62.91	19	26
+YML056C	Imd4	none	Metabolism	43.37	57.06	17	25
+YBL032W	Khd1	mRNA	Localization	38.32	46.46	11	18
+YDR037W	Krs1	tRNA	tRNA Synthetase	33.84	29.27	15	17
+YHR082C	Ksp1	none	Other	4.9	12.83	3	10
+YGL099W	Lsg1	rRNA	Ribosome Synthesis	10.16	24.69	5	11
+YDR060W	Mak21	rRNA	Ribosome Synthesis	7.22	6.92	6	6
+YPL169C	Mex67	mRNA	Export	19.95	17.36	5	8
+YKR095W	Mlp1	mRNA	Export/Splicing	3.04	2.29	4	3
+YPR112C	Mrd1	rRNA	Ribosome Synthesis	44.53	52.31	30	42
+YPL184C	Mrn1	mRNA	Translation	47.71	49.18	23	20
+YOR354C	Msc6	none	Unknown	7.81	6.79	4	4
+YDR194C	Mss116	mRNA	Splicing	3.46	9.49	2	5
+YJL050W	Mtr4	multiple RNA types	Nuclear Processing	26.56	23.39	23	3
+YKL074C	Mud2	mRNA (Abovich and Rosbash, 1997)	Splicing	8.76	21.06	2	8
+YGL122C	NAB2	mRNA	Export	27.04	24.15	9	14
+YPL190C	NAB3	mRNA and others	Nuclear Processing	42.78	38.96	27	27
+YML117W	NAB6	mRNA	Unknown	36.07	35.1	34	34
+YHR086W	Nam8	snRNA and mRNA (Puig et al, 1999; Gottschalk et al., 1998)	Splicing	29.83	34.23	11	12
+YPL126W	Nan1	snoRNA	Ribosome Synthesis	17.11	15.47	9	8
+YPL226W	NEW1	rRNA	Ribosome Synthesis	36.87	41.22	31	38
+YBR212W	Ngr1	mRNA	Decay	22.95	31.04	8	13
+YMR309C	Nip1	mRNA	Translation	13.06	26.85	7	17
+YOR206W	Noc2	rRNA	Ribosome Synthesis	3.49	4.51	2	3
+YPL043W	Nop4	rRNA	Ribosome Synthesis	29.34	39.42	17	23
+YLR197W	NOP56	rRNA	Ribosome Synthesis	21.03	38.49	9	16
+YOR310C	Nop58	snoRNA	Ribosome Synthesis	33.62	38.94	12	16
+YGR103W	Nop7	rRNA	Ribosome Synthesis	4.84	4.13	2	2
+YJL010C	NOP9	rRNA	Ribosome Synthesis	12.61	21.32	6	14
+YDR432W	Npl3	mRNA	Transcription/Export/Splicing/Translation Repression	44.41	42.86	11	12
+YNL251C	Nrd1	mRNA and others	Transcription	47.96	42.15	19	18
+YGR159C	Nsr1	rRNA	Ribosome Synthesis	44.69	46.86	22	23
+YER006W	Nug1	rRNA	Ribosome Synthesis	7.96	12.5	3	6
+YER165W	Pab1	mRNA	Translation	81.28	87.52	63	61
+YOL115W	Pap2	multiple RNA types	Nuclear Processing	14.47	9.25	2	5
+YCR077C	Pat1	mRNA	Decay	4.44	7.91	2	6
+YGR178C	Pbp1	mRNA	Decay	8.99	18.84	4	11
+YBR233W	Pbp2	mRNA	Other	20.58	20.58	6	8
+YBL051C	Pin4	unknown	Unknown	8.83	13.77	3	5
+YNL262W	Pol2	none	DNA Metabolism	2.3	4.05	3	7
+YGL120C	Prp43	mRNA	Splicing	29.84	24.38	16	16
+YHR165C	Prp8	snRNA (Dix et al., 1998; Vidal et al., 1999)	Splicing	3.03	3.36	5	7
+YDR505C	Psp1	none	Unknown	15.81	17.48	9	12
+YML017W	Psp2	none	Unknown	20.83	32.38	8	16
+YNL016W	Pub1	mRNA	Decay	45.27	58.5	13	17
+YJR091C	Puf1	mRNA	Decay	7.61	11.46	5	10
+YPR042C	Puf2	mRNA	Decay/ Translation Repression	3.9	13.38	2	9
+YLL013C	Puf3	mRNA	Decay	18.43	23.21	13	18
+YGL014W	PUF4	mRNA	Decay	28.15	32.88	19	22
+YGL178W	Puf5	mRNA	Decay	11.93	20.78	7	12
+YDR496C	Puf6	mRNA	Translation Repression	3.66	5.03	2	3
+YPL212C	PUS1	tRNA	tRNA Modification	2.22	9.56	5	3
+YCR057C	Pwp2	rRNA	Ribosome Synthesis	3.76	5.74	3	5
+YOR048C	Rat1	mRNA and others	Decay	9.64	13.22	7	11
+YAR007C	RFA1	none	DNA Metabolism	17.07	34.3	9	16
+YNL002C	RLP7	rRNA	Ribosome Synthesis	30.75	31.37	7	8
+YGL107C	Rmd9	mRNA 	Translation	6.79	11.61	2	6
+YOR151C	Rpb2	mRNA	Transcription	8.58	18.79	8	2
+YHL015W	RPS20	rRNA	Translation	33.06	33.06	2	5
+YPL012W	RRP12	rRNA	Ribosome Synthesis	45.4	18.4	6	18
+YMR229C	Rrp5	rRNA	Ribosome Synthesis	45.4	46.04	81	11
+YHL034C	SBP1	mRNA	Translation Repression	62.24	63.61	18	19
+YJL080C	Scp160	mRNA	Translation	63.83	71.28	88	104
+YGR279C	Scw4	none	Other	11.91	12.18	2	3
+YLR430W	SEN1	mRNA and others	Transcription	10.76	13.05	17	23
+YLR398C	Ski2	mRNA	Decay	13.75	17.95	13	16
+YDR515W	Slf1	mRNA	Translation	23.94	23.94	8	8
+YGR271W	Slh1	mRNA	Translation Repression	3.18	5.29	4	7
+YLL011W	Sof1	rRNA	Ribosome Synthesis	6.68	20.25	2	7
+YML010W	Spt5	mRNA	Transcription/ Nuclear Processing	14.11	19.1	12	18
+YCL037C	Sro9	mRNA	Translation	64.06	59.44	24	25
+YDR293C	Ssd1	mRNA	Translation Repression/ Localization	31.12	44.32	30	48
+YHL007C	Ste20	none	Other	3.82	11.71	2	7
+YMR125W	Sto1	mRNA	Nuclear Processing	22.49	26.48	14	17
+YDR172W	Sup35	rRNA	Translation	19.56	41.17	13	29
+YPL009C	TAE2	unknown	Translation	8.74	17.96	7	15
+YNL253W	Tex1	mRNA	Export	7.53	15.17	2	5
+YNL139C	Tho2	mRNA	Transcription	14.65	21.79	19	29
+YPR163C	Tif3	mRNA	Translation	50.23	64.91	16	24
+YMR012W	TIF31	unknown	Unknown	13.7	22.87	13	24
+YBR079C	Tif32	mRNA	Translation	35.48	44.61	27	39
+YGR162W	TIF4631	mRNA	Translation	37.5	44.54	35	44
+YGL049C	TIF4632	mRNA	Translation	28.99	40.04	19	30
+YOR091W	Tma46	unknown	Translation	6.67	8.27	2	3
+YGR185C	Tys1	tRNA	tRNA Synthetase	34.52	49.49	12	18
+YER151C	Ubp3	mRNA	Other	15.24	27.3	8	20
+YMR080C	UPF1	mRNA	Decay	31.64	37.08	22	28
+YGR072W	Upf3	mRNA	Decay	9.75	28.42	2	10
+YKL014C	URB1	rRNA	Ribosome Synthesis	3.8	3.85	5	6
+YBL004W	Utp20	unknown	Ribosome Synthesis	2.25	5.78	4	11
+YDL185W	VMA1	none	Other	7.13	22.22	14	20
+YGL173C	Xrn1	mRNA	Decay	46.14	49.48	78	86
+YBR238c	YBR238C	none	Unknown	17.86	12.45	7	7
+YGR054w	YGR054w	rRNA	Translation	8.06	23.83	3	10
+YGR250c	YGR250c	unknown	Unknown	60.69	61.97	42	46
+YLL032c	Yll032c	rRNA	Unknown	3.76	10.06	2	6
+YLR419w	YLR419w	unknown	Unknown	28.22	37.7	32	48

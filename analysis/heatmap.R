@@ -124,7 +124,7 @@ fer.heatmap <- function(m, rown, pal, RowSideColors, main="Proteins with higher 
 #                 colsep=1:ncol(m), rowsep=1:nrow(m), sepwidth=c(.01, .01),
                  RowSideColors=RowSideColors, trace="none", 
                  Rowv=T, Colv=F, col=pal, dendrogram="none", cexRow=0.5, cexCol=0.5, key=T, 
-                 labRow=rown, labCol=constructs$gene[match(colnames(m), constructs$name)],
+                 labRow=rown, labCol=constructs$gene[match(colnames(m), constructs$name)][o],
                  density.info="none", main=main)
   #legend("topright", fill=brewer.pal(3, "Pastel1"), legend=levels(pos))
   invisible(h)

@@ -16,7 +16,6 @@ library(ggplot2)
 library(RColorBrewer)
 library(reshape)
 library(rMQanalysis)
-library(biomaRt)
 
 set.seed(666)
 setwd("/fsimb/groups/imb-buttergr/=EVOREG/rnalib")
