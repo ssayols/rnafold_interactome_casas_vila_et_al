@@ -1,4 +1,4 @@
-Code assocaited with XXXXX.
+Code assocaited with Casas-Vila N, Sayols S, Pérez-Martínez L, Scheibe M, Butter F. The RNA fold interactome of evolutionary conserved RNA structures in S. cerevisiae. Nat Commun. 2020;11(1):2789. Published 2020 Jun 3. doi:10.1038/s41467-020-16555-4.
 
 ### Contents
 
@@ -10,9 +10,5 @@ Code assocaited with XXXXX.
 * __primers:__ primer design for the construct sequences
 
 ### Data
-Data files larger tahn 10MB (uncompressed) are not included in this repo, and available upon request.
+Data files larger than 10MB (uncompressed) are not included in this repo, and available upon request.
 Still, scripts to generate most data are included.
-
-```sh
-find . -size -10M \( -name \*.sh -o -name \*.R -o -name \*.txt -o -name \*.csv \) -exec tar rvf x.tar --exclude "./src/*" --exclude "./bin/*" --exclude "./tmp/*" '{}' \;
-```
